@@ -1,0 +1,8 @@
+너는 독립 검증자다(읽기 전용, 파일 수정 금지). 한국어로 답해.
+검증 대상: FedMSE 직렬>병렬 격차 원인 규명 1단계 분석(탐색 모드, run 0~2).
+파일(/home/sdh2983/fedmse 아래): analysis/PRE_RULES_3.md(동결, sha256 analysis/PRE_RULES_3.sha256), analysis/PRE_RULES_3_ADD1.md(탐색 모드 부속, 동결), analysis/analyze_cause.py(분석 코드), analysis/cause_result.json(결과), analysis/main_exp2.py 아님 src/main_exp2.py(실행기), 원자료 src/Checkpoint/Results/EXP/CAUSE/{n_S_log,n_P1_log,n_P2,n_P5,i_S,i_P1}/Run_*.jsonl 및 기존 src/Checkpoint/Results/EXP/H12/final_uniform{,_parallel}/Run_{0..2}.jsonl.
+확인할 것:
+(1) 판정이 PRE_RULES_3(+ADD1)대로인가: H-A(셀 상태, 이동거리 맞춤, 지지/기각/판정불가), H-B(격차 작음, 상대 드리프트 CI, 천장), H-C. 코드와 규칙이 어긋나는 곳 지적.
+(2) 계산 오류와 시드·분할 누수: 원자료에서 M1/M2/G/이동거리비/상대드리프트/에폭비를 독립 재계산해 cause_result.json과 대조. 일치 검사(n_S_log/n_P1_log가 기존 셀과 AUC 동일)도 확인. n_P5가 run 0에서 발산해 중단된 처리가 규칙대로인지.
+(3) 해석이 근거를 넘어서지 않는가. 특히: η=2 병렬이 직렬보다 오히려 좋은 것(G<0)이 n=3에서 어디까지 말할 수 있는지, 이동거리 비 0.57 때문에 H-A가 기계적으로 '판정불가'가 되는 의미, IID 격차가 비-IID의 약 17%/10%이나 드리프트 CI가 0을 포함하는 상황의 해석, 에폭비 1.10(라운드 1~20은 1.45).
+출력: 항목별 OK/문제 있음 + 근거 수치, 마지막 줄에 '종합: 문제 없음' 또는 '종합: 문제 있음'. 코드-규칙의 사소한 표기 불일치는 '문제 있음'과 구분해 '경미'로 따로 표시.

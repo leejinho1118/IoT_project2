@@ -1,0 +1,8 @@
+너는 독립 검증자다(읽기 전용, 파일 수정 금지). 한국어로 답해.
+검증 대상: FedMSE 후속 실험의 0단계(무비용 분석).
+파일(모두 /home/sdh2983/fedmse 아래): analysis/PRE_RULES_3.md(동결된 사전 규칙, sha256는 analysis/PRE_RULES_3.sha256), analysis/analyze_cause0.py(분석 코드), analysis/analyze_h1h2.py(재사용 함수), analysis/cause0_result.json(결과), 원자료 src/Checkpoint/Results/EXP/H12/final_uniform{,_parallel}/Run_{0..9}.jsonl.
+확인할 것:
+(1) 판정이 PRE_RULES_3.md §1 규칙대로인가(상승 중, 도달 라운드, 후반 격차, 멈춤 조건 i/ii, 가설 선별). 규칙과 코드가 어긋나는 곳이 있으면 지적.
+(2) 계산 오류, 시드·분할 누수가 없는가. 가능하면 원자료에서 M1/M2/후반 격차/상승 폭을 독립적으로 다시 계산해 cause0_result.json과 비교.
+(3) 해석이 근거를 넘어서지 않는가. 특히 reach_round가 M1=1, M2=1로 나온 것이 규칙대로의 기계적 결과인지, 그 의미(1라운드 AUC가 가장 높은 비단조 곡선)를 어떻게 보고해야 하는지 의견.
+출력: 항목별 OK/문제 있음 + 근거 수치, 마지막 줄에 '종합: 문제 없음' 또는 '종합: 문제 있음'.
