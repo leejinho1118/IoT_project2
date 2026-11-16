@@ -1,0 +1,193 @@
+{
+  "validation": "passed",
+  "records": 45,
+  "unique_partition_rows": 145401,
+  "checks": [
+    "45 unique complete evaluations",
+    "Source and extension hashes unchanged",
+    "Global row-ID and feature-fingerprint disjointness",
+    "Prediction labels/roles and confusion matrices independently checked",
+    "All 4500 client AUCs recomputed",
+    "No-update metrics and weights invariant",
+    "Verified normal routing only",
+    "Common participation prefix and per-client sample budgets; actual early-stop steps recorded"
+  ],
+  "summary_stage_3": [
+    {
+      "arm": "no_update",
+      "old": {
+        "mean_client_auc": {
+          "mean": 0.9881546466377801,
+          "std": 0.0025950163934633235
+        },
+        "fpr": {
+          "mean": 0.05282412060301508,
+          "std": 0.0021338744968185264
+        },
+        "tpr": {
+          "mean": 0.9118738696233388,
+          "std": 0.030478893123324677
+        }
+      },
+      "new": {
+        "mean_client_auc": {
+          "mean": 0.987884451720554,
+          "std": 0.002831714376810428
+        },
+        "fpr": {
+          "mean": 0.057321919902170594,
+          "std": 0.0016961434592763793
+        },
+        "tpr": {
+          "mean": 0.9115277505393214,
+          "std": 0.02986194481752907
+        }
+      },
+      "old_auc_change": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "old_fpr_change": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "cumulative_additional_seconds": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "initial_training_seconds": {
+        "mean": 789.6626553999959,
+        "std": 253.4418412792361
+      },
+      "replay_bank_feature_bytes": {
+        "mean": 0,
+        "std": 0.0
+      },
+      "update_optimizer_steps": {
+        "mean": 0,
+        "std": 0.0
+      }
+    },
+    {
+      "arm": "new_only",
+      "old": {
+        "mean_client_auc": {
+          "mean": 0.9926019329563736,
+          "std": 0.0034554209283997254
+        },
+        "fpr": {
+          "mean": 0.052462311557788945,
+          "std": 0.0008645553032203635
+        },
+        "tpr": {
+          "mean": 0.9942989698828341,
+          "std": 0.0029484154805867733
+        }
+      },
+      "new": {
+        "mean_client_auc": {
+          "mean": 0.9931203806772487,
+          "std": 0.0032572992994788583
+        },
+        "fpr": {
+          "mean": 0.05732191990217059,
+          "std": 0.0015371587711035441
+        },
+        "tpr": {
+          "mean": 0.9945165718768386,
+          "std": 0.0028278123598669486
+        }
+      },
+      "old_auc_change": {
+        "mean": 0.00444728631859348,
+        "std": 0.004840322387016636
+      },
+      "old_fpr_change": {
+        "mean": -0.0003618090452261316,
+        "std": 0.001794469477038444
+      },
+      "cumulative_additional_seconds": {
+        "mean": 104.38822638003622,
+        "std": 36.495339159279474
+      },
+      "initial_training_seconds": {
+        "mean": 789.6626553999959,
+        "std": 253.4418412792361
+      },
+      "replay_bank_feature_bytes": {
+        "mean": 0,
+        "std": 0.0
+      },
+      "update_optimizer_steps": {
+        "mean": 34741.8,
+        "std": 7978.712721987175
+      }
+    },
+    {
+      "arm": "replay",
+      "old": {
+        "mean_client_auc": {
+          "mean": 0.9921839910631806,
+          "std": 0.002715484301626696
+        },
+        "fpr": {
+          "mean": 0.05226130653266332,
+          "std": 0.0013103924432568122
+        },
+        "tpr": {
+          "mean": 0.991428796099709,
+          "std": 0.007771091573531362
+        }
+      },
+      "new": {
+        "mean_client_auc": {
+          "mean": 0.9926292720789587,
+          "std": 0.0026388471266707626
+        },
+        "fpr": {
+          "mean": 0.05739834912870682,
+          "std": 0.0020924027548156264
+        },
+        "tpr": {
+          "mean": 0.9913316336536576,
+          "std": 0.008555238083338261
+        }
+      },
+      "old_auc_change": {
+        "mean": 0.004029344425400527,
+        "std": 0.003954204855970314
+      },
+      "old_fpr_change": {
+        "mean": -0.0005628140703517595,
+        "std": 0.0014099037521005174
+      },
+      "cumulative_additional_seconds": {
+        "mean": 103.11755460000131,
+        "std": 30.884643642569937
+      },
+      "initial_training_seconds": {
+        "mean": 789.6626553999959,
+        "std": 253.4418412792361
+      },
+      "replay_bank_feature_bytes": {
+        "mean": 5888000,
+        "std": 0.0
+      },
+      "update_optimizer_steps": {
+        "mean": 35749.6,
+        "std": 10094.85177206679
+      }
+    }
+  ],
+  "initial_cost_total_seconds": 3948.3132769999793,
+  "bundle_reference_validation": {
+    "passed": true,
+    "bundles": 45,
+    "checks": [
+      "Only normal training/candidate reference IDs",
+      "No final evaluation IDs in references or threshold calibration",
+      "Fixed initial validation IDs across all arms",
+      "Replay includes initial normal; new_only only current verified normal"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "round": "D",
+  "policy": {
+    "round": "D",
+    "parent": "A",
+    "memory": "uniform",
+    "ratio": 0.25,
+    "adaptive": true,
+    "gate": false,
+    "direction": "개발 정상 복원 오차에 따른 단계별 리플레이 비율 조정"
+  },
+  "records": 15,
+  "development_score_mean": 0.6719150860850793,
+  "training_seconds_mean": 386.85557694000016,
+  "accepted_updates": 15,
+  "total_updates": 15,
+  "metrics": {
+    "old": {
+      "mean_client_auc": {
+        "mean": 0.921622053286267,
+        "std": 0.09058204022436878
+      },
+      "fpr": {
+        "mean": 0.06168958742632613,
+        "std": 0.010863885450335415
+      },
+      "tpr": {
+        "mean": 0.8846743295019157,
+        "std": 0.11492576506108447
+      }
+    },
+    "new": {
+      "mean_client_auc": {
+        "mean": 0.5306528008721332,
+        "std": 0.141083774562733
+      },
+      "fpr": {
+        "mean": 0.6422234099412079,
+        "std": 0.11599221139150513
+      },
+      "tpr": {
+        "mean": 0.8846743295019157,
+        "std": 0.11492576506108447
+      }
+    }
+  },
+  "old_auc_change_mean": -0.028096366360181403,
+  "old_mse_change_mean": 0.23000549092223127,
+  "interpretation": {
+    "adaptation": "Development-only; final comparison is still locked",
+    "retention": "Existing mean AUC decreased",
+    "memory": "Logical feature payload only, not total RSS",
+    "causality": "CEN reference is refit per current normal training set; model/reference effects coexist"
+  },
+  "wall_seconds": 1941.7208447000012
+}

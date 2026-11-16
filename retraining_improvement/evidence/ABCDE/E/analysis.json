@@ -1,0 +1,56 @@
+{
+  "round": "E",
+  "policy": {
+    "round": "E",
+    "parent": "A",
+    "memory": "uniform",
+    "ratio": 0.25,
+    "adaptive": false,
+    "gate": true,
+    "direction": "개발 성능 검증 뒤 갱신 채택 또는 이전 버전으로 되돌리기"
+  },
+  "records": 15,
+  "development_score_mean": 0.7124300035565114,
+  "training_seconds_mean": 246.98915655999446,
+  "accepted_updates": 4,
+  "total_updates": 15,
+  "metrics": {
+    "old": {
+      "mean_client_auc": {
+        "mean": 0.939880531831863,
+        "std": 0.061088912849721705
+      },
+      "fpr": {
+        "mean": 0.07282252783235102,
+        "std": 0.012811211294911072
+      },
+      "tpr": {
+        "mean": 0.8372286079182631,
+        "std": 0.06847352714153547
+      }
+    },
+    "new": {
+      "mean_client_auc": {
+        "mean": 0.5885283796103956,
+        "std": 0.15711226015628402
+      },
+      "fpr": {
+        "mean": 0.6177445216461785,
+        "std": 0.22752740258901724
+      },
+      "tpr": {
+        "mean": 0.8372286079182631,
+        "std": 0.06847352714153547
+      }
+    }
+  },
+  "old_auc_change_mean": -0.009837887814585366,
+  "old_mse_change_mean": 0.19195025184140185,
+  "interpretation": {
+    "adaptation": "Development-only; final comparison is still locked",
+    "retention": "Existing mean AUC decreased",
+    "memory": "Logical feature payload only, not total RSS",
+    "causality": "CEN reference is refit per current normal training set; model/reference effects coexist"
+  },
+  "wall_seconds": 1247.203998099998
+}

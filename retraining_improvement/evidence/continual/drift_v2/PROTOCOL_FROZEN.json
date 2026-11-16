@@ -1,0 +1,54 @@
+{
+  "frozen_at": "2026-11-13T17:28:27.872081+09:00",
+  "author": "20222038 이진호",
+  "question": "Verified normal adaptation under simulated A-to-B feature shift; replay memory ablation and uncertain-verification sensitivity",
+  "primary_comparisons": [
+    "no_update",
+    "new_only_u00",
+    "replay32_u00",
+    "replay128_u00"
+  ],
+  "secondary_comparisons": [
+    "new_only_u20",
+    "replay32_u20",
+    "replay128_u20"
+  ],
+  "full_budget": {
+    "clients": 50,
+    "stages": 3,
+    "seeds": [
+      0,
+      10000,
+      20000,
+      30000,
+      40000
+    ],
+    "local_epochs": 100,
+    "initial_rounds": 20,
+    "update_rounds": 20,
+    "batch_size": 12,
+    "lr": 1e-05,
+    "lambda_sae": 10
+  },
+  "input_stability": "Initial A StandardScaler; fixed saturation [-20,20] in every arm. Added after unbounded CPU smoke developed NaNs; no effect-based tuning.",
+  "scenario": "20% normal scenario-fit -> signed-log1p/StandardScaler/PC1, median cut learned only here; 20% normal holdout reserved first; remaining60% A initial / B arrivals",
+  "primary_end_point": "Final preassigned stage across all 5 seeds; old/new mean-client AUC, pooled FPR/TPR; old normal reconstruction MSE change",
+  "secondary_end_points": [
+    "initial-threshold-frozen FPR/TPR",
+    "extra training seconds",
+    "actual optimizer steps",
+    "logical replay feature bytes"
+  ],
+  "threshold": "Fixed initial A validation row IDs, 95th percentile recalibrated per model; secondary initial numeric threshold frozen",
+  "cen_reference": "Current arm normal training set. Outcomes include representation learning plus CEN-refit effects; no claim of isolating weight-only forgetting.",
+  "verifier": "정상 여부를 확인할 수 있는 검증자 보조 환경; all candidates routed, real attacks quarantined, uncertain excluded",
+  "untuned": "Do not change seeds/budgets/threshold/cut based on pilot or full evaluation scores. No assumed forgetting or replay advantage.",
+  "limitations": [
+    "Simulated feature shift, no timestamps/device metadata",
+    "Same underlying CSV as previous V1; not an external independent dataset",
+    "Repeated holdout across stages",
+    "Input clipping changes preprocessing vs original; do not compare V2 numerically to V1 as a controlled improvement estimate",
+    "Initial server development and threshold validation retain A in all arms",
+    "Memory metric is feature payload, not RSS"
+  ]
+}
