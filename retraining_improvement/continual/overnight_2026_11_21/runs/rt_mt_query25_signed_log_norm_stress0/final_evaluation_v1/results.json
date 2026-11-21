@@ -1,0 +1,2702 @@
+[
+  {
+    "method": "new_only",
+    "seed": 0,
+    "stage": 1,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9854251250367755,
+        "mean_client_pr_auc": 0.9926831305091076,
+        "fpr": 0.01696969696969697,
+        "tpr": 0.9619460500963392,
+        "confusion_matrix": [
+          [
+            811,
+            14
+          ],
+          [
+            79,
+            1997
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9749417249417249,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9591346153846154,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9688374125874126,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9182692307692307,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.9998528979111504,
+            "fpr": 0.048484848484848485,
+            "tpr": 0.9975728155339806,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.994988344988345,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9663461538461539,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9885052447552447,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.96875,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 973,
+            "total": 1052,
+            "tpr": 0.9249049429657795
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 14,
+            "total": 825,
+            "fpr": 0.01696969696969697
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8462131684986888,
+        "mean_client_pr_auc": 0.8995143885358695,
+        "fpr": 0.5043894652833201,
+        "tpr": 0.9978208760078449,
+        "confusion_matrix": [
+          [
+            621,
+            632
+          ],
+          [
+            10,
+            4579
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.7990929065462908,
+            "fpr": 0.33070866141732286,
+            "tpr": 1.0,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.8601324549297362,
+            "fpr": 0.5258964143426295,
+            "tpr": 0.9967320261437909,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8788428951827645,
+            "fpr": 0.4880952380952381,
+            "tpr": 1.0,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.7613673449586762,
+            "fpr": 0.5910931174089069,
+            "tpr": 0.9989106753812637,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9316302408759765,
+            "fpr": 0.5903614457831325,
+            "tpr": 0.9934354485776805,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 503,
+            "total": 507,
+            "tpr": 0.9921104536489151
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 33,
+            "total": 34,
+            "tpr": 0.9705882352941176
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 25,
+            "total": 26,
+            "tpr": 0.9615384615384616
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 950,
+            "total": 950,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 1021,
+            "total": 1024,
+            "tpr": 0.9970703125
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 1023,
+            "total": 1024,
+            "tpr": 0.9990234375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 414,
+            "total": 1034,
+            "fpr": 0.40038684719535783
+          },
+          "Wipro_bulb": {
+            "false_positive": 218,
+            "total": 219,
+            "fpr": 0.9954337899543378
+          }
+        }
+      }
+    },
+    "weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+    "bundle_sha256": "91808ac25d59f5acfcb1b59fdcb1c0b6bbbc3fe73ecb29c8ceefe5a2503e0e73",
+    "cumulative_training_seconds": 3.1315584999974817,
+    "cumulative_optimizer_steps": 200,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "new_only_seed0_stage1.csv.gz"
+  },
+  {
+    "method": "new_only",
+    "seed": 0,
+    "stage": 2,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9928787878787879,
+        "mean_client_pr_auc": 0.9949044420395652,
+        "fpr": 0.006060606060606061,
+        "tpr": 0.8362235067437379,
+        "confusion_matrix": [
+          [
+            820,
+            5
+          ],
+          [
+            340,
+            1736
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9880390442890443,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.5697115384615384,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9963869463869465,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.8605769230769231,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 1.0,
+            "fpr": 0.0,
+            "tpr": 0.9247572815533981,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.9966054778554778,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9254807692307693,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9833624708624709,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9014423076923077,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 712,
+            "total": 1052,
+            "tpr": 0.6768060836501901
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 5,
+            "total": 825,
+            "fpr": 0.006060606060606061
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8322196735562247,
+        "mean_client_pr_auc": 0.8949231779511411,
+        "fpr": 0.19553072625698323,
+        "tpr": 0.5890172150795381,
+        "confusion_matrix": [
+          [
+            1008,
+            245
+          ],
+          [
+            1886,
+            2703
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.8727504338830611,
+            "fpr": 0.027559055118110236,
+            "tpr": 0.10423452768729642,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.7921125953701533,
+            "fpr": 0.1752988047808765,
+            "tpr": 0.4324618736383442,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8538532697029428,
+            "fpr": 0.2857142857142857,
+            "tpr": 0.9967320261437909,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.8275779947606573,
+            "fpr": 0.27530364372469635,
+            "tpr": 0.9989106753812637,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.8148040740643098,
+            "fpr": 0.21686746987951808,
+            "tpr": 0.4135667396061269,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 453,
+            "total": 507,
+            "tpr": 0.893491124260355
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 19,
+            "total": 34,
+            "tpr": 0.5588235294117647
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 10,
+            "total": 26,
+            "tpr": 0.38461538461538464
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 458,
+            "total": 1024,
+            "tpr": 0.447265625
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 765,
+            "total": 950,
+            "tpr": 0.8052631578947368
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 588,
+            "total": 1024,
+            "tpr": 0.57421875
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 410,
+            "total": 1024,
+            "tpr": 0.400390625
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 108,
+            "total": 1034,
+            "fpr": 0.10444874274661509
+          },
+          "Wipro_bulb": {
+            "false_positive": 137,
+            "total": 219,
+            "fpr": 0.6255707762557078
+          }
+        }
+      }
+    },
+    "weights_sha256": "50c0fe64670580356fe399591a1c9bb9bfacef3bc7e5e17ec4284b9817d51fbe",
+    "bundle_sha256": "d5308c18205c62a401ceebfca1083b0368297f8c71b89bba0d5307ddf40b5145",
+    "cumulative_training_seconds": 4.078520999988541,
+    "cumulative_optimizer_steps": 420,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "new_only_seed0_stage2.csv.gz"
+  },
+  {
+    "method": "new_only",
+    "seed": 0,
+    "stage": 3,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9947843822843824,
+        "mean_client_pr_auc": 0.995610875511745,
+        "fpr": 0.007272727272727273,
+        "tpr": 0.9788053949903661,
+        "confusion_matrix": [
+          [
+            819,
+            6
+          ],
+          [
+            44,
+            2032
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9976107226107227,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9903846153846154,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9866113053613054,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9326923076923077,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 1.0,
+            "fpr": 0.0,
+            "tpr": 1.0,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.9963578088578088,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9831730769230769,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9933420745920746,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9879807692307693,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 1008,
+            "total": 1052,
+            "tpr": 0.9581749049429658
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 6,
+            "total": 825,
+            "fpr": 0.007272727272727273
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8471215703257885,
+        "mean_client_pr_auc": 0.8969840742767218,
+        "fpr": 0.3016759776536313,
+        "tpr": 0.9731967748964916,
+        "confusion_matrix": [
+          [
+            875,
+            378
+          ],
+          [
+            123,
+            4466
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.8734985081262236,
+            "fpr": 0.2637795275590551,
+            "tpr": 1.0,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.8032705778194411,
+            "fpr": 0.30278884462151395,
+            "tpr": 0.8671023965141612,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8891007020091988,
+            "fpr": 0.30952380952380953,
+            "tpr": 1.0,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.7940559039630246,
+            "fpr": 0.2793522267206478,
+            "tpr": 1.0,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.8756821597110543,
+            "fpr": 0.3534136546184739,
+            "tpr": 0.9989059080962801,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 507,
+            "total": 507,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 34,
+            "total": 34,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 23,
+            "total": 26,
+            "tpr": 0.8846153846153846
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 950,
+            "total": 950,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 905,
+            "total": 1024,
+            "tpr": 0.8837890625
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 1023,
+            "total": 1024,
+            "tpr": 0.9990234375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 159,
+            "total": 1034,
+            "fpr": 0.15377176015473887
+          },
+          "Wipro_bulb": {
+            "false_positive": 219,
+            "total": 219,
+            "fpr": 1.0
+          }
+        }
+      }
+    },
+    "weights_sha256": "f163a3131879fc47a02900ca2aaab677e2186188d9484d1f625f46ebfe23704f",
+    "bundle_sha256": "f168ad05bffbfcd64ab104a3d2313c225b986900d611e02628b2c882a994becc",
+    "cumulative_training_seconds": 5.309014600003138,
+    "cumulative_optimizer_steps": 640,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "new_only_seed0_stage3.csv.gz"
+  },
+  {
+    "method": "replay",
+    "seed": 0,
+    "stage": 1,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.997298951048951,
+        "mean_client_pr_auc": 0.9967354065066468,
+        "fpr": 0.007272727272727273,
+        "tpr": 0.9566473988439307,
+        "confusion_matrix": [
+          [
+            819,
+            6
+          ],
+          [
+            90,
+            1986
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.995352564102564,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9447115384615384,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9988927738927739,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9326923076923077,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 1.0,
+            "fpr": 0.0,
+            "tpr": 0.9830097087378641,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.9992278554778554,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9615384615384616,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9930215617715618,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9615384615384616,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 962,
+            "total": 1052,
+            "tpr": 0.9144486692015209
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 6,
+            "total": 825,
+            "fpr": 0.007272727272727273
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8129467482390543,
+        "mean_client_pr_auc": 0.8864132217454708,
+        "fpr": 0.49640861931364727,
+        "tpr": 0.9710176509043364,
+        "confusion_matrix": [
+          [
+            631,
+            622
+          ],
+          [
+            133,
+            4456
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.8468157685501039,
+            "fpr": 0.31496062992125984,
+            "tpr": 0.998914223669924,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.712834934770721,
+            "fpr": 0.5298804780876494,
+            "tpr": 0.8649237472766884,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8773774942075596,
+            "fpr": 0.49603174603174605,
+            "tpr": 0.9989106753812637,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.7285641202049871,
+            "fpr": 0.582995951417004,
+            "tpr": 0.9989106753812637,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.8991414234619001,
+            "fpr": 0.5622489959839357,
+            "tpr": 0.9934354485776805,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 503,
+            "total": 507,
+            "tpr": 0.9921104536489151
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 33,
+            "total": 34,
+            "tpr": 0.9705882352941176
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 20,
+            "total": 26,
+            "tpr": 0.7692307692307693
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 950,
+            "total": 950,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 903,
+            "total": 1024,
+            "tpr": 0.8818359375
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 1023,
+            "total": 1024,
+            "tpr": 0.9990234375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 410,
+            "total": 1034,
+            "fpr": 0.3965183752417795
+          },
+          "Wipro_bulb": {
+            "false_positive": 212,
+            "total": 219,
+            "fpr": 0.9680365296803652
+          }
+        }
+      }
+    },
+    "weights_sha256": "6308fab9762d50730f8fe366374a569fc2271f22eaea796a39cf6a9ae4809848",
+    "bundle_sha256": "ad7cb1233c52f307137ad971e1a7cf8bc578bd454a8b8869c09fa7cbe11b28c6",
+    "cumulative_training_seconds": 1.3986072999541648,
+    "cumulative_optimizer_steps": 200,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "replay_seed0_stage1.csv.gz"
+  },
+  {
+    "method": "replay",
+    "seed": 0,
+    "stage": 2,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.997004662004662,
+        "mean_client_pr_auc": 0.9964095579719114,
+        "fpr": 0.0036363636363636364,
+        "tpr": 0.8420038535645472,
+        "confusion_matrix": [
+          [
+            822,
+            3
+          ],
+          [
+            328,
+            1748
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9988344988344988,
+            "fpr": 0.0,
+            "tpr": 0.6129807692307693,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9964015151515151,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.8581730769230769,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 1.0,
+            "fpr": 0.0,
+            "tpr": 0.9077669902912622,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.9966491841491841,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9278846153846154,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9931381118881119,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9038461538461539,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 724,
+            "total": 1052,
+            "tpr": 0.688212927756654
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 3,
+            "total": 825,
+            "fpr": 0.0036363636363636364
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8086845751298668,
+        "mean_client_pr_auc": 0.8817745922113751,
+        "fpr": 0.1931364724660814,
+        "tpr": 0.5354107648725213,
+        "confusion_matrix": [
+          [
+            1011,
+            242
+          ],
+          [
+            2132,
+            2457
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.7932322791898571,
+            "fpr": 0.05905511811023622,
+            "tpr": 0.0988056460369164,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.7395559374701628,
+            "fpr": 0.16733067729083664,
+            "tpr": 0.20806100217864923,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8792621987066431,
+            "fpr": 0.25396825396825395,
+            "tpr": 0.9967320261437909,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.8303961260617608,
+            "fpr": 0.27530364372469635,
+            "tpr": 0.9989106753812637,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.80097633422091,
+            "fpr": 0.21285140562248997,
+            "tpr": 0.37527352297593,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 451,
+            "total": 507,
+            "tpr": 0.8895463510848126
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 23,
+            "total": 34,
+            "tpr": 0.6764705882352942
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 10,
+            "total": 26,
+            "tpr": 0.38461538461538464
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 410,
+            "total": 1024,
+            "tpr": 0.400390625
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 570,
+            "total": 950,
+            "tpr": 0.6
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 583,
+            "total": 1024,
+            "tpr": 0.5693359375
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 410,
+            "total": 1024,
+            "tpr": 0.400390625
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 109,
+            "total": 1034,
+            "fpr": 0.10541586073500966
+          },
+          "Wipro_bulb": {
+            "false_positive": 133,
+            "total": 219,
+            "fpr": 0.6073059360730594
+          }
+        }
+      }
+    },
+    "weights_sha256": "763eb8d57aab3615eb3f62ceb5a6270c8726ea9d81f3a1305437c87ee4e93a71",
+    "bundle_sha256": "db91700346dd21aa74e4daafb4be1859b62dd733e901e87e21245b4c383eae62",
+    "cumulative_training_seconds": 2.7709069999982603,
+    "cumulative_optimizer_steps": 420,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "replay_seed0_stage2.csv.gz"
+  },
+  {
+    "method": "replay",
+    "seed": 0,
+    "stage": 3,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9965238927738929,
+        "mean_client_pr_auc": 0.9960766643760364,
+        "fpr": 0.007272727272727273,
+        "tpr": 0.9783236994219653,
+        "confusion_matrix": [
+          [
+            819,
+            6
+          ],
+          [
+            45,
+            2031
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9965617715617716,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9783653846153846,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9963723776223776,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9471153846153846,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 1.0,
+            "fpr": 0.0,
+            "tpr": 0.9975728155339806,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.9963578088578088,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9903846153846154,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9933275058275058,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9783653846153846,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 1007,
+            "total": 1052,
+            "tpr": 0.9572243346007605
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 6,
+            "total": 825,
+            "fpr": 0.007272727272727273
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8364849521948263,
+        "mean_client_pr_auc": 0.8934302277133842,
+        "fpr": 0.3391859537110934,
+        "tpr": 0.9477010241882763,
+        "confusion_matrix": [
+          [
+            828,
+            425
+          ],
+          [
+            240,
+            4349
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.8747680969846195,
+            "fpr": 0.3228346456692913,
+            "tpr": 1.0,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.7902681214141256,
+            "fpr": 0.350597609561753,
+            "tpr": 0.8649237472766884,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8880805408583186,
+            "fpr": 0.2976190476190476,
+            "tpr": 1.0,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.7877272366436453,
+            "fpr": 0.3481781376518219,
+            "tpr": 1.0,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.8415807650734227,
+            "fpr": 0.37751004016064255,
+            "tpr": 0.8730853391684902,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 507,
+            "total": 507,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 34,
+            "total": 34,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 16,
+            "total": 26,
+            "tpr": 0.6153846153846154
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 950,
+            "total": 950,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 796,
+            "total": 1024,
+            "tpr": 0.77734375
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 1022,
+            "total": 1024,
+            "tpr": 0.998046875
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 207,
+            "total": 1034,
+            "fpr": 0.20019342359767892
+          },
+          "Wipro_bulb": {
+            "false_positive": 218,
+            "total": 219,
+            "fpr": 0.9954337899543378
+          }
+        }
+      }
+    },
+    "weights_sha256": "2175b4324cc9c66fd16d55c526ba4183c4760ea7dac6c5b206a389409eb6c265",
+    "bundle_sha256": "4526f26898053ab80fa59f0c43a05964318cc4231b2a3c26f9b888e304307ab3",
+    "cumulative_training_seconds": 4.0371209000004455,
+    "cumulative_optimizer_steps": 640,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "replay_seed0_stage3.csv.gz"
+  },
+  {
+    "method": "trigger_safe",
+    "seed": 0,
+    "stage": 1,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9854251250367755,
+        "mean_client_pr_auc": 0.9926831305091076,
+        "fpr": 0.01696969696969697,
+        "tpr": 0.9619460500963392,
+        "confusion_matrix": [
+          [
+            811,
+            14
+          ],
+          [
+            79,
+            1997
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9749417249417249,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9591346153846154,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9688374125874126,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9182692307692307,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.9998528979111504,
+            "fpr": 0.048484848484848485,
+            "tpr": 0.9975728155339806,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.994988344988345,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9663461538461539,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9885052447552447,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.96875,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 973,
+            "total": 1052,
+            "tpr": 0.9249049429657795
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 14,
+            "total": 825,
+            "fpr": 0.01696969696969697
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8462131684986888,
+        "mean_client_pr_auc": 0.8995143885358695,
+        "fpr": 0.5043894652833201,
+        "tpr": 0.9978208760078449,
+        "confusion_matrix": [
+          [
+            621,
+            632
+          ],
+          [
+            10,
+            4579
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.7990929065462908,
+            "fpr": 0.33070866141732286,
+            "tpr": 1.0,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.8601324549297362,
+            "fpr": 0.5258964143426295,
+            "tpr": 0.9967320261437909,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8788428951827645,
+            "fpr": 0.4880952380952381,
+            "tpr": 1.0,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.7613673449586762,
+            "fpr": 0.5910931174089069,
+            "tpr": 0.9989106753812637,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9316302408759765,
+            "fpr": 0.5903614457831325,
+            "tpr": 0.9934354485776805,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 503,
+            "total": 507,
+            "tpr": 0.9921104536489151
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 33,
+            "total": 34,
+            "tpr": 0.9705882352941176
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 25,
+            "total": 26,
+            "tpr": 0.9615384615384616
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 950,
+            "total": 950,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 1021,
+            "total": 1024,
+            "tpr": 0.9970703125
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 1023,
+            "total": 1024,
+            "tpr": 0.9990234375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 414,
+            "total": 1034,
+            "fpr": 0.40038684719535783
+          },
+          "Wipro_bulb": {
+            "false_positive": 218,
+            "total": 219,
+            "fpr": 0.9954337899543378
+          }
+        }
+      }
+    },
+    "weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+    "bundle_sha256": "13da0c679ea07451e4a81c5617f832e6352a659be697aa571ec49856fbb09e33",
+    "cumulative_training_seconds": 1.0273416999843903,
+    "cumulative_optimizer_steps": 200,
+    "checkpoint": {
+      "enabled": true,
+      "accepted": true,
+      "selected_round": 2,
+      "selected_score": 1.1834546637723333,
+      "candidate_checks": [
+        {
+          "round": 1,
+          "score": 1.15851143818404,
+          "guard_pass": false,
+          "state_sha256": "003f77320a976ef7c6a76e287409c3f16e7aa691071f30d08796aa4f4919f261"
+        },
+        {
+          "round": 2,
+          "score": 1.1834546637723333,
+          "guard_pass": true,
+          "state_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3"
+        }
+      ],
+      "selected_weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+      "guard": "old AUC >= initial - .03; old/new FPR <= previous + .02; old/new TPR >= previous - .02; primary score improves > 1e-4"
+    },
+    "prediction_file": "trigger_safe_seed0_stage1.csv.gz"
+  },
+  {
+    "method": "trigger_safe",
+    "seed": 0,
+    "stage": 2,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9854251250367755,
+        "mean_client_pr_auc": 0.9926831305091076,
+        "fpr": 0.007272727272727273,
+        "tpr": 0.9051059730250481,
+        "confusion_matrix": [
+          [
+            819,
+            6
+          ],
+          [
+            197,
+            1879
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9749417249417249,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.875,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9688374125874126,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.84375,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.9998528979111504,
+            "fpr": 0.0,
+            "tpr": 0.9271844660194175,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.994988344988345,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9254807692307693,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9885052447552447,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9543269230769231,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 855,
+            "total": 1052,
+            "tpr": 0.8127376425855514
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 6,
+            "total": 825,
+            "fpr": 0.007272727272727273
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8462131684986888,
+        "mean_client_pr_auc": 0.8995143885358695,
+        "fpr": 0.23224261771747806,
+        "tpr": 0.6992808890825888,
+        "confusion_matrix": [
+          [
+            962,
+            291
+          ],
+          [
+            1380,
+            3209
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.7990929065462908,
+            "fpr": 0.2125984251968504,
+            "tpr": 0.32356134636264927,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.8601324549297362,
+            "fpr": 0.2350597609561753,
+            "tpr": 0.8485838779956427,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8788428951827645,
+            "fpr": 0.2896825396825397,
+            "tpr": 0.9978213507625272,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.7613673449586762,
+            "fpr": 0.14979757085020243,
+            "tpr": 0.3355119825708061,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9316302408759765,
+            "fpr": 0.27309236947791166,
+            "tpr": 0.9934354485776805,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 470,
+            "total": 507,
+            "tpr": 0.9270216962524654
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 19,
+            "total": 34,
+            "tpr": 0.5588235294117647
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 20,
+            "total": 26,
+            "tpr": 0.7692307692307693
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 614,
+            "total": 1024,
+            "tpr": 0.599609375
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 699,
+            "total": 950,
+            "tpr": 0.7357894736842105
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 764,
+            "total": 1024,
+            "tpr": 0.74609375
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 623,
+            "total": 1024,
+            "tpr": 0.6083984375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 124,
+            "total": 1034,
+            "fpr": 0.11992263056092843
+          },
+          "Wipro_bulb": {
+            "false_positive": 167,
+            "total": 219,
+            "fpr": 0.7625570776255708
+          }
+        }
+      }
+    },
+    "weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+    "bundle_sha256": "3952a13caf4cc4cd06ee31b81cbaab4393e0ad3912ff095cfd76d80bcf123467",
+    "cumulative_training_seconds": 2.4469739999622107,
+    "cumulative_optimizer_steps": 420,
+    "checkpoint": {
+      "enabled": true,
+      "accepted": false,
+      "selected_round": 0,
+      "selected_score": 1.1222120237915352,
+      "candidate_checks": [
+        {
+          "round": 1,
+          "score": 1.1095104938938394,
+          "guard_pass": false,
+          "state_sha256": "b432865b1cae9e7888e91e97017012c8347537934c3920dd9299d8cca4d65977"
+        },
+        {
+          "round": 2,
+          "score": 1.1249308861907341,
+          "guard_pass": false,
+          "state_sha256": "50c0fe64670580356fe399591a1c9bb9bfacef3bc7e5e17ec4284b9817d51fbe"
+        }
+      ],
+      "selected_weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+      "guard": "old AUC >= initial - .03; old/new FPR <= previous + .02; old/new TPR >= previous - .02; primary score improves > 1e-4"
+    },
+    "prediction_file": "trigger_safe_seed0_stage2.csv.gz"
+  },
+  {
+    "method": "trigger_safe",
+    "seed": 0,
+    "stage": 3,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9950233100233101,
+        "mean_client_pr_auc": 0.9957041351136121,
+        "fpr": 0.007272727272727273,
+        "tpr": 0.9715799614643545,
+        "confusion_matrix": [
+          [
+            819,
+            6
+          ],
+          [
+            59,
+            2017
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9977272727272728,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9879807692307693,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9876748251748253,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9110576923076923,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 1.0,
+            "fpr": 0.0,
+            "tpr": 0.9975728155339806,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.9963578088578088,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9759615384615384,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9933566433566434,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9855769230769231,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 993,
+            "total": 1052,
+            "tpr": 0.9439163498098859
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 6,
+            "total": 825,
+            "fpr": 0.007272727272727273
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.842371688962776,
+        "mean_client_pr_auc": 0.8938934471895955,
+        "fpr": 0.29209896249002393,
+        "tpr": 0.9716713881019831,
+        "confusion_matrix": [
+          [
+            887,
+            366
+          ],
+          [
+            130,
+            4459
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.8650474065334667,
+            "fpr": 0.2677165354330709,
+            "tpr": 1.0,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.7915874627850255,
+            "fpr": 0.2788844621513944,
+            "tpr": 0.8649237472766884,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8783112010236194,
+            "fpr": 0.30952380952380953,
+            "tpr": 1.0,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.8056900672999745,
+            "fpr": 0.2793522267206478,
+            "tpr": 1.0,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.8712223071717944,
+            "fpr": 0.3253012048192771,
+            "tpr": 0.9934354485776805,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 507,
+            "total": 507,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 34,
+            "total": 34,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 16,
+            "total": 26,
+            "tpr": 0.6153846153846154
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 950,
+            "total": 950,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 905,
+            "total": 1024,
+            "tpr": 0.8837890625
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 1023,
+            "total": 1024,
+            "tpr": 0.9990234375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 148,
+            "total": 1034,
+            "fpr": 0.14313346228239845
+          },
+          "Wipro_bulb": {
+            "false_positive": 218,
+            "total": 219,
+            "fpr": 0.9954337899543378
+          }
+        }
+      }
+    },
+    "weights_sha256": "5d26a35dde9e20ba505bd20ed3a9d0fe21b48d49c64fc7482588172025b4aea5",
+    "bundle_sha256": "6c0f422d59b13c351e36116c38801e941abc03c2b06169f604c0ad135a004b56",
+    "cumulative_training_seconds": 3.631500099960249,
+    "cumulative_optimizer_steps": 640,
+    "checkpoint": {
+      "enabled": true,
+      "accepted": true,
+      "selected_round": 2,
+      "selected_score": 1.197895915655121,
+      "candidate_checks": [
+        {
+          "round": 1,
+          "score": 1.1858868368621334,
+          "guard_pass": true,
+          "state_sha256": "e335eee4f81672c32215cc6d9f0991efc4a8baa869d3eb37d3202bf6ac791561"
+        },
+        {
+          "round": 2,
+          "score": 1.197895915655121,
+          "guard_pass": true,
+          "state_sha256": "5d26a35dde9e20ba505bd20ed3a9d0fe21b48d49c64fc7482588172025b4aea5"
+        }
+      ],
+      "selected_weights_sha256": "5d26a35dde9e20ba505bd20ed3a9d0fe21b48d49c64fc7482588172025b4aea5",
+      "guard": "old AUC >= initial - .03; old/new FPR <= previous + .02; old/new TPR >= previous - .02; primary score improves > 1e-4"
+    },
+    "prediction_file": "trigger_safe_seed0_stage3.csv.gz"
+  },
+  {
+    "method": "safe_new",
+    "seed": 0,
+    "stage": 1,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9854251250367755,
+        "mean_client_pr_auc": 0.9926831305091076,
+        "fpr": 0.01696969696969697,
+        "tpr": 0.9619460500963392,
+        "confusion_matrix": [
+          [
+            811,
+            14
+          ],
+          [
+            79,
+            1997
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9749417249417249,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9591346153846154,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9688374125874126,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9182692307692307,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.9998528979111504,
+            "fpr": 0.048484848484848485,
+            "tpr": 0.9975728155339806,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.994988344988345,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9663461538461539,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9885052447552447,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.96875,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 973,
+            "total": 1052,
+            "tpr": 0.9249049429657795
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 14,
+            "total": 825,
+            "fpr": 0.01696969696969697
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8462131684986888,
+        "mean_client_pr_auc": 0.8995143885358695,
+        "fpr": 0.5043894652833201,
+        "tpr": 0.9978208760078449,
+        "confusion_matrix": [
+          [
+            621,
+            632
+          ],
+          [
+            10,
+            4579
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.7990929065462908,
+            "fpr": 0.33070866141732286,
+            "tpr": 1.0,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.8601324549297362,
+            "fpr": 0.5258964143426295,
+            "tpr": 0.9967320261437909,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8788428951827645,
+            "fpr": 0.4880952380952381,
+            "tpr": 1.0,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.7613673449586762,
+            "fpr": 0.5910931174089069,
+            "tpr": 0.9989106753812637,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9316302408759765,
+            "fpr": 0.5903614457831325,
+            "tpr": 0.9934354485776805,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 503,
+            "total": 507,
+            "tpr": 0.9921104536489151
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 33,
+            "total": 34,
+            "tpr": 0.9705882352941176
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 25,
+            "total": 26,
+            "tpr": 0.9615384615384616
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 950,
+            "total": 950,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 1021,
+            "total": 1024,
+            "tpr": 0.9970703125
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 1023,
+            "total": 1024,
+            "tpr": 0.9990234375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 414,
+            "total": 1034,
+            "fpr": 0.40038684719535783
+          },
+          "Wipro_bulb": {
+            "false_positive": 218,
+            "total": 219,
+            "fpr": 0.9954337899543378
+          }
+        }
+      }
+    },
+    "weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+    "bundle_sha256": "48f3d62bdd85051e9598073cb45597cb753f6b74336a48366d79f37b95924382",
+    "cumulative_training_seconds": 1.1879306999617256,
+    "cumulative_optimizer_steps": 200,
+    "checkpoint": {
+      "enabled": true,
+      "accepted": true,
+      "selected_round": 2,
+      "selected_score": 1.1834546637723333,
+      "candidate_checks": [
+        {
+          "round": 1,
+          "score": 1.15851143818404,
+          "guard_pass": false,
+          "state_sha256": "003f77320a976ef7c6a76e287409c3f16e7aa691071f30d08796aa4f4919f261"
+        },
+        {
+          "round": 2,
+          "score": 1.1834546637723333,
+          "guard_pass": true,
+          "state_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3"
+        }
+      ],
+      "selected_weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+      "guard": "old AUC >= initial - .03; old/new FPR <= previous + .02; old/new TPR >= previous - .02; primary score improves > 1e-4"
+    },
+    "prediction_file": "safe_new_seed0_stage1.csv.gz"
+  },
+  {
+    "method": "safe_new",
+    "seed": 0,
+    "stage": 2,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9854251250367755,
+        "mean_client_pr_auc": 0.9926831305091076,
+        "fpr": 0.007272727272727273,
+        "tpr": 0.9051059730250481,
+        "confusion_matrix": [
+          [
+            819,
+            6
+          ],
+          [
+            197,
+            1879
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9749417249417249,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.875,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9688374125874126,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.84375,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.9998528979111504,
+            "fpr": 0.0,
+            "tpr": 0.9271844660194175,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.994988344988345,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9254807692307693,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9885052447552447,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9543269230769231,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 855,
+            "total": 1052,
+            "tpr": 0.8127376425855514
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 6,
+            "total": 825,
+            "fpr": 0.007272727272727273
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.8462131684986888,
+        "mean_client_pr_auc": 0.8995143885358695,
+        "fpr": 0.23224261771747806,
+        "tpr": 0.6992808890825888,
+        "confusion_matrix": [
+          [
+            962,
+            291
+          ],
+          [
+            1380,
+            3209
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.7990929065462908,
+            "fpr": 0.2125984251968504,
+            "tpr": 0.32356134636264927,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.8601324549297362,
+            "fpr": 0.2350597609561753,
+            "tpr": 0.8485838779956427,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8788428951827645,
+            "fpr": 0.2896825396825397,
+            "tpr": 0.9978213507625272,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.7613673449586762,
+            "fpr": 0.14979757085020243,
+            "tpr": 0.3355119825708061,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9316302408759765,
+            "fpr": 0.27309236947791166,
+            "tpr": 0.9934354485776805,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 470,
+            "total": 507,
+            "tpr": 0.9270216962524654
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 19,
+            "total": 34,
+            "tpr": 0.5588235294117647
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 20,
+            "total": 26,
+            "tpr": 0.7692307692307693
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 614,
+            "total": 1024,
+            "tpr": 0.599609375
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 699,
+            "total": 950,
+            "tpr": 0.7357894736842105
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 764,
+            "total": 1024,
+            "tpr": 0.74609375
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 623,
+            "total": 1024,
+            "tpr": 0.6083984375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 124,
+            "total": 1034,
+            "fpr": 0.11992263056092843
+          },
+          "Wipro_bulb": {
+            "false_positive": 167,
+            "total": 219,
+            "fpr": 0.7625570776255708
+          }
+        }
+      }
+    },
+    "weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+    "bundle_sha256": "366aa2fe63191dede7cfc9a042ba04f651666bf3dd5a8e88b1c373e54f622335",
+    "cumulative_training_seconds": 2.2974664999637753,
+    "cumulative_optimizer_steps": 420,
+    "checkpoint": {
+      "enabled": true,
+      "accepted": false,
+      "selected_round": 0,
+      "selected_score": 1.1222120237915352,
+      "candidate_checks": [
+        {
+          "round": 1,
+          "score": 1.1095104938938394,
+          "guard_pass": false,
+          "state_sha256": "b432865b1cae9e7888e91e97017012c8347537934c3920dd9299d8cca4d65977"
+        },
+        {
+          "round": 2,
+          "score": 1.1249308861907341,
+          "guard_pass": false,
+          "state_sha256": "50c0fe64670580356fe399591a1c9bb9bfacef3bc7e5e17ec4284b9817d51fbe"
+        }
+      ],
+      "selected_weights_sha256": "686f425b1bae0d75aa47d70440d5af8fd700f647c605223d90cf9d958ff803e3",
+      "guard": "old AUC >= initial - .03; old/new FPR <= previous + .02; old/new TPR >= previous - .02; primary score improves > 1e-4"
+    },
+    "prediction_file": "safe_new_seed0_stage2.csv.gz"
+  },
+  {
+    "method": "safe_new",
+    "seed": 0,
+    "stage": 3,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9950233100233101,
+        "mean_client_pr_auc": 0.9957041351136121,
+        "fpr": 0.007272727272727273,
+        "tpr": 0.9715799614643545,
+        "confusion_matrix": [
+          [
+            819,
+            6
+          ],
+          [
+            59,
+            2017
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.9977272727272728,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9879807692307693,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.9876748251748253,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9110576923076923,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 1.0,
+            "fpr": 0.0,
+            "tpr": 0.9975728155339806,
+            "normal": 165,
+            "attack": 412
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.9963578088578088,
+            "fpr": 0.006060606060606061,
+            "tpr": 0.9759615384615384,
+            "normal": 165,
+            "attack": 416
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.9933566433566434,
+            "fpr": 0.012121212121212121,
+            "tpr": 0.9855769230769231,
+            "normal": 165,
+            "attack": 416
+          }
+        ],
+        "attack_type_tpr": {
+          "known_development_attack/ARP_poisioning": {
+            "detected": 993,
+            "total": 1052,
+            "tpr": 0.9439163498098859
+          },
+          "known_development_attack/DOS_SYN_Hping": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          }
+        },
+        "normal_pattern_fpr": {
+          "MQTT_Publish": {
+            "false_positive": 6,
+            "total": 825,
+            "fpr": 0.007272727272727273
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.842371688962776,
+        "mean_client_pr_auc": 0.8938934471895955,
+        "fpr": 0.29209896249002393,
+        "tpr": 0.9716713881019831,
+        "confusion_matrix": [
+          [
+            887,
+            366
+          ],
+          [
+            130,
+            4459
+          ]
+        ],
+        "auc_clients": 5,
+        "normal_clients": 5,
+        "attack_clients": 5,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Virtual-client-1",
+            "auc": 0.8650474065334667,
+            "fpr": 0.2677165354330709,
+            "tpr": 1.0,
+            "normal": 254,
+            "attack": 921
+          },
+          {
+            "client": 2,
+            "device": "Virtual-client-2",
+            "auc": 0.7915874627850255,
+            "fpr": 0.2788844621513944,
+            "tpr": 0.8649237472766884,
+            "normal": 251,
+            "attack": 918
+          },
+          {
+            "client": 3,
+            "device": "Virtual-client-3",
+            "auc": 0.8783112010236194,
+            "fpr": 0.30952380952380953,
+            "tpr": 1.0,
+            "normal": 252,
+            "attack": 918
+          },
+          {
+            "client": 4,
+            "device": "Virtual-client-4",
+            "auc": 0.8056900672999745,
+            "fpr": 0.2793522267206478,
+            "tpr": 1.0,
+            "normal": 247,
+            "attack": 918
+          },
+          {
+            "client": 5,
+            "device": "Virtual-client-5",
+            "auc": 0.8712223071717944,
+            "fpr": 0.3253012048192771,
+            "tpr": 0.9934354485776805,
+            "normal": 249,
+            "attack": 914
+          }
+        ],
+        "attack_type_tpr": {
+          "heldout_attack_type/DDOS_Slowloris": {
+            "detected": 507,
+            "total": 507,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/Metasploit_Brute_Force_SSH": {
+            "detected": 34,
+            "total": 34,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_FIN_SCAN": {
+            "detected": 16,
+            "total": 26,
+            "tpr": 0.6153846153846154
+          },
+          "heldout_attack_type/NMAP_OS_DETECTION": {
+            "detected": 1024,
+            "total": 1024,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_TCP_scan": {
+            "detected": 950,
+            "total": 950,
+            "tpr": 1.0
+          },
+          "heldout_attack_type/NMAP_UDP_SCAN": {
+            "detected": 905,
+            "total": 1024,
+            "tpr": 0.8837890625
+          },
+          "heldout_attack_type/NMAP_XMAS_TREE_SCAN": {
+            "detected": 1023,
+            "total": 1024,
+            "tpr": 0.9990234375
+          }
+        },
+        "normal_pattern_fpr": {
+          "Thing_Speak": {
+            "false_positive": 148,
+            "total": 1034,
+            "fpr": 0.14313346228239845
+          },
+          "Wipro_bulb": {
+            "false_positive": 218,
+            "total": 219,
+            "fpr": 0.9954337899543378
+          }
+        }
+      }
+    },
+    "weights_sha256": "5d26a35dde9e20ba505bd20ed3a9d0fe21b48d49c64fc7482588172025b4aea5",
+    "bundle_sha256": "9aa606a8a2bda87f009498a6baf2762eabac8749caf2800c112236849da02d8f",
+    "cumulative_training_seconds": 3.5874246999737807,
+    "cumulative_optimizer_steps": 640,
+    "checkpoint": {
+      "enabled": true,
+      "accepted": true,
+      "selected_round": 2,
+      "selected_score": 1.197895915655121,
+      "candidate_checks": [
+        {
+          "round": 1,
+          "score": 1.1858868368621334,
+          "guard_pass": true,
+          "state_sha256": "e335eee4f81672c32215cc6d9f0991efc4a8baa869d3eb37d3202bf6ac791561"
+        },
+        {
+          "round": 2,
+          "score": 1.197895915655121,
+          "guard_pass": true,
+          "state_sha256": "5d26a35dde9e20ba505bd20ed3a9d0fe21b48d49c64fc7482588172025b4aea5"
+        }
+      ],
+      "selected_weights_sha256": "5d26a35dde9e20ba505bd20ed3a9d0fe21b48d49c64fc7482588172025b4aea5",
+      "guard": "old AUC >= initial - .03; old/new FPR <= previous + .02; old/new TPR >= previous - .02; primary score improves > 1e-4"
+    },
+    "prediction_file": "safe_new_seed0_stage3.csv.gz"
+  }
+]

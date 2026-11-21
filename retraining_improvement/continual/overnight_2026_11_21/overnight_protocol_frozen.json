@@ -1,0 +1,134 @@
+{
+  "created": "2026-11-21T03:27:20.327525+09:00",
+  "deadline_kst": "2026-11-21T07:33:00+09:00",
+  "primary_method": "safe_new",
+  "secondary_methods": [
+    "trigger_safe",
+    "safe_replay"
+  ],
+  "data_sources": [
+    "Official UCI N-BaIoT 442, raw 9 devices, 7 Mirai-covered clients",
+    "Independent official UCI RT-IoT2022 942, 5 simulated clients, two reciprocal normal-pattern orderings"
+  ],
+  "development_grid": {
+    "dataset": "raw_blocks_v2",
+    "families": [
+      [
+        "standard",
+        "norm"
+      ],
+      [
+        "standard",
+        "squared"
+      ],
+      [
+        "signed_log",
+        "norm"
+      ],
+      [
+        "signed_log",
+        "squared"
+      ]
+    ],
+    "seeds": [
+      0
+    ],
+    "initial_epochs": 30,
+    "initial_rounds": 8,
+    "update_epochs": 20,
+    "update_rounds": 6,
+    "final_features_access": false
+  },
+  "family_selection": {
+    "basis": "Raw N-BaIoT development records only, primary safe_new, mean score across all three stages; prefer every-stage old/new FPR <=.10, otherwise highest predeclared score",
+    "score": "0.5*(old_auc+new_auc)+.25*min(old_tpr,new_tpr)-.5*max(0,max_fpr-.10)",
+    "retain_baseline": [
+      "standard",
+      "norm"
+    ],
+    "selected_additional_recipe": "Best feasible non-baseline family; if baseline wins, retain best signed-log family as preprocessing ablation",
+    "no_selection_from_Mirai_or_RT_final": true
+  },
+  "main_replication": {
+    "initial_epochs": 30,
+    "initial_rounds": 8,
+    "update_epochs": 20,
+    "update_rounds": 6,
+    "seeds": [
+      0,
+      10000,
+      20000,
+      30000,
+      40000
+    ],
+    "datasets": [
+      "raw_blocks_v2",
+      "rt_thing_to_mqtt_v1",
+      "rt_mqtt_to_thing_v1"
+    ],
+    "families": "Frozen standard/norm and development-selected additional recipe",
+    "methods": [
+      "no_update",
+      "calibration_only",
+      "reference_only",
+      "new_only",
+      "replay",
+      "safe_replay",
+      "trigger_safe",
+      "safe_new"
+    ],
+    "seed0_raw_reuse": "Include the already trained identical-budget development model once, not as an extra seed"
+  },
+  "full_budget_sensitivity": {
+    "recipe": "Development-selected primary family",
+    "initial_epochs": 100,
+    "initial_rounds": 20,
+    "update_epochs": 100,
+    "update_rounds": 20,
+    "seeds": [
+      0,
+      10000,
+      20000
+    ],
+    "methods": [
+      "no_update",
+      "calibration_only",
+      "reference_only",
+      "new_only",
+      "replay",
+      "trigger_safe",
+      "safe_new"
+    ],
+    "priority": "After cross-dataset main replication; may remain incomplete at deadline"
+  },
+  "robustness_sensitivity": {
+    "settings": [
+      "candidate verification query fraction .25, clean approvals",
+      "approved-normal contamination target .05, full candidate queries"
+    ],
+    "seeds": [
+      0,
+      10000,
+      20000
+    ],
+    "recipe": "Same frozen primary family and main budget",
+    "controls": "Ordinary new-only/replay and guarded/triggered policy; use the same actual observed label budget within each setting",
+    "protected_materials": "Initial/old anchors and current-stage validation/calibration remain clean and available; contamination affects incoming approved training/reference only",
+    "priority": "Only if time permits; never change settings in response to final performance"
+  },
+  "evaluation": {
+    "final_access": "Only after family/method/settings are frozen and corresponding training finishes; no changes after final opening",
+    "primary": [
+      "new known/heldout-attack ROC-AUC",
+      "old ROC-AUC retention",
+      "FPR/TPR under normal-only q95 calibration",
+      "worst-device and attack-type rates",
+      "verified candidate request counts",
+      "actual optimizer steps and update accept/skip counts"
+    ],
+    "RT_secondary": "Normal FPR by Thing/MQTT/Wipro; Wipro is final-only. Contradictory 107 rows retained exclusively in final metrics.",
+    "uncertainty": "Paired learning seeds on shared device/row blocks; do not multiply evaluation repetitions into independent sample sizes",
+    "limits": "Raw N-BaIoT remains the same public captures; exact/coarse overlaps with earlier prepared CSV removed but not a new acquisition. RT is independent dataset with different numeric feature schema and virtual clients. No verified wall-clock timestamps."
+  },
+  "time_rule": "Prioritize matched raw/external seed cohorts. Stop launching work when estimated remaining duration would consume report/verification reserve. Report actual incomplete items; no favorable-seed dropping or hidden early truncation."
+}

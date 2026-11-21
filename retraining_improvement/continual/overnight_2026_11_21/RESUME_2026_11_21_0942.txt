@@ -1,0 +1,16 @@
+FedMSE 복구 지점 | 20222038 이진호
+
+확인 시각: 2026-11-21T09:43:49.871022+09:00
+상태: 학습·최종 평가 완료 / 통합 분석·최종 보고서 대기
+독립 검산 완료: 87개 실행, 1242개 평가 기록
+현재 학습 프로세스 없음. 대표 모델 3개 CPU 로드·가중치 해시 확인 완료.
+
+재개 시 모델을 처음부터 학습하거나 기존 디렉터리를 덮어쓰지 말 것.
+분석은 각 final_evaluation_v1/results.json 및 independent_validation.json에서 이어갈 것.
+분석 스크립트: analyze_final.py → analyze_subgroups.py → analyze_approval_costs.py → plot_final.py
+문서: build_final_report.py (별도 ReportLab 런타임), 렌더링·전체 페이지 검증 후 package_final.py
+추가 교차 검증: verify_participation.py / verify_routing_reference.py / verify_objective_controls.py
+모든 대용량 자료는 현재 LocalProjects 폴더에 유지. OneDrive 저장 금지.
+전체 계획 중 원자료 100/20 예산 민감도 3개는 시간 추정으로 시작하지 않았고 time_budget_skips에 기록됨.
+
+자세한 근거: recovery_savepoint_2026_11_21_0942.json

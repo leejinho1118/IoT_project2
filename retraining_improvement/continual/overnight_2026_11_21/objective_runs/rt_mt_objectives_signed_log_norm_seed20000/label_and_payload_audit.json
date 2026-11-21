@@ -1,0 +1,155 @@
+{
+  "run": "rt_mt_objectives_signed_log_norm_seed20000",
+  "stages": [
+    {
+      "stage": 1,
+      "shared_available_labelled_rows": {
+        "candidate_0": 1024,
+        "new_valid_0": 256,
+        "calib_new_0": 256,
+        "decision_new_0": 256
+      },
+      "protected_new_normal_rows_beyond_candidate": 768
+    },
+    {
+      "stage": 2,
+      "shared_available_labelled_rows": {
+        "candidate_1": 1024,
+        "new_valid_1": 256,
+        "calib_new_1": 256,
+        "decision_new_1": 256
+      },
+      "protected_new_normal_rows_beyond_candidate": 768
+    },
+    {
+      "stage": 3,
+      "shared_available_labelled_rows": {
+        "candidate_2": 1024,
+        "new_valid_2": 256,
+        "calib_new_2": 256,
+        "decision_new_2": 256
+      },
+      "protected_new_normal_rows_beyond_candidate": 768
+    }
+  ],
+  "methods": [
+    {
+      "method": "distill_replay",
+      "seed": 20000,
+      "stage": 1,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 720,
+      "cumulative_training_seconds": 4.254889399977401,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "distill_replay",
+      "seed": 20000,
+      "stage": 2,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 2520,
+      "cumulative_training_seconds": 10.884604800026864,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "distill_replay",
+      "seed": 20000,
+      "stage": 3,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 3240,
+      "cumulative_training_seconds": 13.405130700033624,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "align_distill_replay",
+      "seed": 20000,
+      "stage": 1,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 720,
+      "cumulative_training_seconds": 2.9565526000224054,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "align_distill_replay",
+      "seed": 20000,
+      "stage": 2,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 2520,
+      "cumulative_training_seconds": 8.870963499997742,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "align_distill_replay",
+      "seed": 20000,
+      "stage": 3,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 3240,
+      "cumulative_training_seconds": 11.266845099977218,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "safe_align_distill",
+      "seed": 20000,
+      "stage": 1,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 720,
+      "cumulative_training_seconds": 2.2427769000059925,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "safe_align_distill",
+      "seed": 20000,
+      "stage": 2,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 2520,
+      "cumulative_training_seconds": 8.335218199994415,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "safe_align_distill",
+      "seed": 20000,
+      "stage": 3,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 3240,
+      "cumulative_training_seconds": 10.75678410002729,
+      "candidate_queries_in_instrumented_runner": 1024
+    }
+  ],
+  "cost_interpretation": "Do not multiply shared verified materials by number of arms. Frozen baseline does not need candidate oracle labels to deploy; runner calculates routing for matched bookkeeping. Query25 is candidate-only saving: clean new validation, calibration, decision labels remain additionally required. Replay payload is logical feature content, NOT RSS or measured network traffic. The implementation materializes initial banks for common instrumentation even for no replay policies."
+}

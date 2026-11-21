@@ -1,0 +1,83 @@
+{
+  "config": {
+    "profile": "study",
+    "data": "continual\\overnight_2026_11_21\\rt_thing_to_mqtt_v1",
+    "mode": "signed_log",
+    "shrink_kind": "norm",
+    "seeds": [
+      0
+    ],
+    "device": "cuda",
+    "stages": 3,
+    "initial_epochs": 30,
+    "initial_rounds": 8,
+    "local_epochs": 20,
+    "rounds": 6,
+    "initial_cap": 1024,
+    "update_cap": 256,
+    "capacity": 128,
+    "batch_size": 12,
+    "lr": 1e-05,
+    "gradient_clip": 5.0,
+    "scale_floor": 0.01,
+    "normal_validation_quantile": 0.95,
+    "normal_trigger_fpr": 0.1,
+    "author": "20222038 이진호",
+    "clients": 5,
+    "input_dim": 81
+  },
+  "methods": [
+    {
+      "name": "no_update",
+      "frozen": true
+    },
+    {
+      "name": "calibration_only",
+      "no_train": true,
+      "keep_reference": true
+    },
+    {
+      "name": "reference_only",
+      "no_train": true,
+      "ratio": 0.25
+    },
+    {
+      "name": "new_only",
+      "ratio": 0.0
+    },
+    {
+      "name": "replay",
+      "ratio": 0.25
+    },
+    {
+      "name": "safe_replay",
+      "ratio": 0.25,
+      "select_round": true
+    },
+    {
+      "name": "trigger_safe",
+      "ratio": 0.0,
+      "select_round": true,
+      "trigger": true
+    },
+    {
+      "name": "safe_new",
+      "ratio": 0.0,
+      "select_round": true
+    }
+  ],
+  "development_npz_sha256": "99c432243338e962aa1f6b4eaad4fb9440289762929eb13d48d25fa5447cfc71",
+  "final_npz_sha256": "e343f64000b9bc38c843780cb774475286004846e6a9606977820609760f0bb3",
+  "final_features_opened": false,
+  "stage_release": "Future stage arrays are not decompressed before activate(stage). Initial learning sees initial old normal only.",
+  "normal_verifier": "Ground-truth-assisted verified-normal environment; actual attack rows excluded from all clean weight and reference fitting",
+  "primary": "safe_new",
+  "secondary": "trigger_safe",
+  "threshold": "Frozen no-update retains initial old q95. Calibration-only and all updates use max(old q95,current-stage new q95). Same-threshold controls separate calibration from weight adaptation.",
+  "selection_score": "0.5*(old_auc+new_auc)+0.25*min(old_tpr,new_tpr)-0.5*max(0,max_fpr-0.10)",
+  "guard": "old_auc >= initial-.03; both domain FPR <= recalibrated_previous+.02 and TPR >= recalibrated_previous-.02; score improves >1e-4",
+  "trigger": "If verified candidate normal FPR under the previous deployed detector <=0.10, skip weight/ref training but update normal calibration",
+  "upstream": "Same SAE topology hidden50/latent11 and MSEAvg; schema-sized input/output; shared sequential semantics; original two-if global stop; norm versus explicit squared loss is a controlled recipe factor",
+  "privacy": "Dataset experiments; initial old/server development/validation materials are shared assumptions. No DP or privacy guarantee",
+  "coverage": "N-BaIoT has 9 actual devices and 7 Mirai-covered clients. RT uses 5 virtual clients, not claimed physical hosts. File order is not proven timestamps."
+}

@@ -1,0 +1,23 @@
+{
+  "created": "2026-11-21T03:52:16.348727+09:00",
+  "scope": "Prospective exact current-new-normal reference control, before any final features are opened",
+  "method": "reference_only_new",
+  "weights": "Frozen common initial weights",
+  "reference": "Exactly the deterministic capped new normals used by ordinary new_only; no old replay",
+  "threshold": "Same max(old normal q95,current normal q95)",
+  "recipe": "Frozen selected additional recipe",
+  "seeds": [
+    0,
+    10000,
+    20000,
+    30000,
+    40000
+  ],
+  "datasets": [
+    "raw_blocks_v2",
+    "rt_thing_to_mqtt_v1",
+    "rt_mqtt_to_thing_v1"
+  ],
+  "purpose": "Separate neural retraining from normal reference/threshold updates; accepted safe_new with same stage input can be compared, while rollbacks require joint-system interpretation",
+  "initial_cache": "Never initialize a missing cache in this control; queue only completed matching main studies"
+}

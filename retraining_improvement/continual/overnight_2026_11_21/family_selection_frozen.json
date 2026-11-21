@@ -1,0 +1,69 @@
+{
+  "state": "frozen",
+  "created": "2026-11-20T18:38:10.950487+00:00",
+  "selection_source": "N-BaIoT development only; final feature arrays not opened",
+  "primary_method": "safe_new",
+  "recipes": [
+    {
+      "mode": "standard",
+      "loss": "norm",
+      "run": "nb_standard_norm_dev0",
+      "score": 1.2462911628034117,
+      "all_stage_fpr_under_10pct": true
+    },
+    {
+      "mode": "standard",
+      "loss": "squared",
+      "run": "nb_standard_squared_dev0",
+      "score": 1.2465145751407303,
+      "all_stage_fpr_under_10pct": true
+    },
+    {
+      "mode": "signed_log",
+      "loss": "norm",
+      "run": "nb_signed_log_norm_dev0",
+      "score": 1.247979413449594,
+      "all_stage_fpr_under_10pct": true
+    },
+    {
+      "mode": "signed_log",
+      "loss": "squared",
+      "run": "nb_signed_log_squared_dev0",
+      "score": 1.2474526567197308,
+      "all_stage_fpr_under_10pct": true
+    }
+  ],
+  "selected": [
+    {
+      "mode": "standard",
+      "loss": "norm",
+      "run": "nb_standard_norm_dev0",
+      "score": 1.2462911628034117,
+      "all_stage_fpr_under_10pct": true
+    },
+    {
+      "mode": "signed_log",
+      "loss": "norm",
+      "run": "nb_signed_log_norm_dev0",
+      "score": 1.247979413449594,
+      "all_stage_fpr_under_10pct": true
+    }
+  ],
+  "planned_seeds": [
+    0,
+    10000,
+    20000,
+    30000,
+    40000
+  ],
+  "primary_stage": 3,
+  "main_budget": {
+    "initial_epochs": 30,
+    "initial_rounds": 8,
+    "local_epochs": 20,
+    "rounds": 6
+  },
+  "deadline_policy": "Time-limited complete cohorts, never performance-dependent omission",
+  "external_dataset": "RT-IoT2022 two reciprocal scenarios; no external final tuning",
+  "protocol_sha256": "b5b0bfe7c2065c92f42d6cefd75b70b4f5953c5109f62a370494afc14bbf7f36"
+}

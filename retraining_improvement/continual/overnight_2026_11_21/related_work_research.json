@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-11-21T04:01:09.805679+09:00",
+  "scope": "Primary author/publication sources; no copied implementation or unverified benchmark superiority claim",
+  "sources": [
+    {
+      "title": "Anomaly Detection in the Open World: Normality Shift Detection, Explanation, and Adaptation",
+      "venue": "NDSS 2023",
+      "url": "https://www.ndss-symposium.org/ndss-paper/anomaly-detection-in-the-open-world-normality-shift-detection-explanation-and-adaptation/",
+      "code": "https://github.com/dongtsi/OWAD",
+      "finding": "OWAD already studies normality shift, output calibration, distribution-level detection and adaptation with reduced manual labeling.",
+      "relevance": "Adding retraining alone is not a new research claim. Our frozen experiment is a FedMSE-specific controlled ablation with a verifier assumption; OWAD was inspected, not reproduced as a benchmark."
+    },
+    {
+      "title": "When Model Meets New Normals: Test-time Adaptation for Unsupervised Time-series Anomaly Detection",
+      "venue": "AAAI 2024; arXiv v2 Jan 2024",
+      "url": "https://arxiv.org/abs/2312.11976",
+      "finding": "Prior work studies changing normal patterns and test-time adaptation for unsupervised time-series anomaly detectors.",
+      "relevance": "Supports motivation, not a proof that our method improves. Our CSV row-block scenarios do not reproduce temporal sequence evaluation from that work."
+    },
+    {
+      "title": "Unsupervised Model Selection for Time-series Anomaly Detection",
+      "venue": "ICLR 2023",
+      "url": "https://arxiv.org/abs/2210.01078",
+      "finding": "Prediction error, model centrality and injected synthetic-anomaly performance are imperfect surrogate metrics; the paper combines rankings.",
+      "relevance": "Normal reconstruction MSE alone is an exploratory control, not a reliable guarantee of attack detection. A future stronger label-scarcity study should compare rank-aggregated or synthetic-validation selectors on untouched data."
+    }
+  ]
+}

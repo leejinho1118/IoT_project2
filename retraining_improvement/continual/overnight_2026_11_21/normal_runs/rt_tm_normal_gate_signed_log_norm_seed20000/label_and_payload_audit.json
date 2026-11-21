@@ -1,0 +1,116 @@
+{
+  "run": "rt_tm_normal_gate_signed_log_norm_seed20000",
+  "stages": [
+    {
+      "stage": 1,
+      "shared_available_labelled_rows": {
+        "candidate_0": 1024,
+        "new_valid_0": 173,
+        "calib_new_0": 151,
+        "decision_new_0": 150
+      },
+      "protected_new_normal_rows_beyond_candidate": 474
+    },
+    {
+      "stage": 2,
+      "shared_available_labelled_rows": {
+        "candidate_1": 1024,
+        "new_valid_1": 172,
+        "calib_new_1": 151,
+        "decision_new_1": 151
+      },
+      "protected_new_normal_rows_beyond_candidate": 474
+    },
+    {
+      "stage": 3,
+      "shared_available_labelled_rows": {
+        "candidate_2": 1024,
+        "new_valid_2": 172,
+        "calib_new_2": 151,
+        "decision_new_2": 151
+      },
+      "protected_new_normal_rows_beyond_candidate": 474
+    }
+  ],
+  "methods": [
+    {
+      "method": "normal_gate_new",
+      "seed": 20000,
+      "stage": 1,
+      "real_training_rows": 512,
+      "old_rows_in_training": 0,
+      "replay_feature_bytes_float64": 0,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 603,
+      "cumulative_training_seconds": 3.69038810004713,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "normal_gate_new",
+      "seed": 20000,
+      "stage": 2,
+      "real_training_rows": 512,
+      "old_rows_in_training": 0,
+      "replay_feature_bytes_float64": 0,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 1323,
+      "cumulative_training_seconds": 5.800603200041223,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "normal_gate_new",
+      "seed": 20000,
+      "stage": 3,
+      "real_training_rows": 512,
+      "old_rows_in_training": 0,
+      "replay_feature_bytes_float64": 0,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 1980,
+      "cumulative_training_seconds": 8.190758700016886,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "normal_gate_replay",
+      "seed": 20000,
+      "stage": 1,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 1080,
+      "cumulative_training_seconds": 4.246775900013745,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "normal_gate_replay",
+      "seed": 20000,
+      "stage": 2,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 2520,
+      "cumulative_training_seconds": 9.856513500039,
+      "candidate_queries_in_instrumented_runner": 1024
+    },
+    {
+      "method": "normal_gate_replay",
+      "seed": 20000,
+      "stage": 3,
+      "real_training_rows": 512,
+      "old_rows_in_training": 125,
+      "replay_feature_bytes_float64": 81000,
+      "bank_feature_bytes_float64": 414720,
+      "weight_training_performed": true,
+      "cumulative_optimizer_steps": 3600,
+      "cumulative_training_seconds": 14.18859670002712,
+      "candidate_queries_in_instrumented_runner": 1024
+    }
+  ],
+  "cost_interpretation": "Do not multiply shared verified materials by number of arms. Frozen baseline does not need candidate oracle labels to deploy; runner calculates routing for matched bookkeeping. Query25 is candidate-only saving: clean new validation, calibration, decision labels remain additionally required. Replay payload is logical feature content, NOT RSS or measured network traffic. The implementation materializes initial banks for common instrumentation even for no replay policies."
+}

@@ -1,0 +1,12 @@
+{
+  "created": "2026-11-21T04:21:48.719373+09:00",
+  "guard": "Development old macro-AUC >= initial-.03; old/new pooled FPR <= recalibrated previous+.02; old/new pooled TPR >= recalibrated previous-.02; score gain>1e-4",
+  "limits": [
+    "Constraints concern labelled known-attack development data, not heldout final performance",
+    "Mean-client AUC and pooled confusion rates can hide individual-device degradation",
+    "Previous deployment is recalibrated to CURRENT normal q95 before comparing weights; therefore threshold relaxation itself can lower TPR versus the original frozen old threshold",
+    "There is no absolute original frozen TPR floor in the present guard",
+    "Normal-only selector removes real attack metrics from online round selection only; it cannot guarantee attack retention"
+  ],
+  "reporting": "Report final old/new AUC, FPR, TPR and worst device/subtype. Do not call the guard a proof of no forgetting or guaranteed safe deployment."
+}

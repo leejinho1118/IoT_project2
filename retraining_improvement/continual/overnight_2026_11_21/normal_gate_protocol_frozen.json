@@ -1,0 +1,24 @@
+{
+  "created": "2026-11-21T03:46:34.568361+09:00",
+  "scope": "Prospective extra normal-only gate ablation; no final evaluation has been opened yet",
+  "score": "Negative mean old/new log normal reconstruction MSE",
+  "guard": "Old normal MSE <= initial 1.05; old/new FPR <= previous +.02; score gain >1e-4",
+  "methods": [
+    "normal_gate_new",
+    "normal_gate_replay"
+  ],
+  "normal_verifier": "Candidate ground-truth normal verification still assumed; removes attack development label requirement for round selection, not the normal verifier",
+  "budget": "Same main30 budget and cached initial models",
+  "seeds": [
+    0,
+    10000,
+    20000
+  ],
+  "datasets": [
+    "raw_blocks_v2",
+    "rt_thing_to_mqtt_v1",
+    "rt_mqtt_to_thing_v1"
+  ],
+  "recipe": "Prior frozen selected additional recipe",
+  "priority": "After prior queues, only if time remains; no changes based on heldout performance"
+}

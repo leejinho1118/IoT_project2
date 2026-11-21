@@ -1,0 +1,56 @@
+{
+  "config": {
+    "profile": "study",
+    "data": "continual\\overnight_2026_11_21\\raw_blocks_v2",
+    "mode": "signed_log",
+    "shrink_kind": "norm",
+    "seeds": [
+      20000
+    ],
+    "device": "cuda",
+    "stages": 3,
+    "initial_epochs": 30,
+    "initial_rounds": 8,
+    "local_epochs": 20,
+    "rounds": 6,
+    "initial_cap": 1024,
+    "update_cap": 256,
+    "capacity": 128,
+    "batch_size": 12,
+    "lr": 1e-05,
+    "gradient_clip": 5.0,
+    "scale_floor": 0.01,
+    "normal_validation_quantile": 0.95,
+    "normal_trigger_fpr": 0.1,
+    "author": "20222038 이진호",
+    "selection_ablation": "normal_only",
+    "clients": 9,
+    "input_dim": 115
+  },
+  "methods": [
+    {
+      "name": "normal_gate_new",
+      "ratio": 0.0,
+      "select_round": true
+    },
+    {
+      "name": "normal_gate_replay",
+      "ratio": 0.25,
+      "select_round": true
+    }
+  ],
+  "development_npz_sha256": "61f2cdebe4ec69596e5b202acc3df563a8d62b04ae9115fc4082af0b8c9a32e8",
+  "final_npz_sha256": "10e7e2d4bb72968fc69026bd67eeec3079a877a046ee9d3f1a407d576dd168bd",
+  "final_features_opened": false,
+  "stage_release": "Future stage arrays are not decompressed before activate(stage). Initial learning sees initial old normal only.",
+  "normal_verifier": "Ground-truth-assisted verified-normal environment; actual attack rows excluded from all clean weight and reference fitting",
+  "primary": "normal_gate_new",
+  "secondary": "trigger_safe",
+  "threshold": "Frozen no-update retains initial old q95. Calibration-only and all updates use max(old q95,current-stage new q95). Same-threshold controls separate calibration from weight adaptation.",
+  "selection_score": "-0.5*(log(old normal MSE + 1e-12)+log(new normal MSE + 1e-12)); no attack-label metric enters selection",
+  "guard": "Old normal reconstruction MSE <= initial*1.05; old/new normal FPR <= recalibrated_previous+.02; normal score improves >1e-4. Attack AUC/TPR logged for monitoring only.",
+  "trigger": "If verified candidate normal FPR under the previous deployed detector <=0.10, skip weight/ref training but update normal calibration",
+  "upstream": "Same SAE topology hidden50/latent11 and MSEAvg; schema-sized input/output; shared sequential semantics; original two-if global stop; norm versus explicit squared loss is a controlled recipe factor",
+  "privacy": "Dataset experiments; initial old/server development/validation materials are shared assumptions. No DP or privacy guarantee",
+  "coverage": "N-BaIoT has 9 actual devices and 7 Mirai-covered clients. RT uses 5 virtual clients, not claimed physical hosts. File order is not proven timestamps."
+}

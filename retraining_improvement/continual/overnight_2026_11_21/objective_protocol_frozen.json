@@ -1,0 +1,27 @@
+{
+  "created": "2026-11-21T04:25:20.972121+09:00",
+  "final_feature_access_count": 0,
+  "hypothesis": "Frozen initial normal latent distillation and new-normal centroid alignment may preserve normal geometry",
+  "loss": "Original norm SAE loss +.1 normalized squared latent error on old replay normals. Alignment arms additionally +.05 normalized squared new-normal latent distance to frozen old-normal centroid; teacher scale floor .01.",
+  "methods": [
+    "distill_replay",
+    "align_distill_replay",
+    "safe_align_distill"
+  ],
+  "primary": "safe_align_distill",
+  "seeds": [
+    0,
+    10000,
+    20000
+  ],
+  "datasets": [
+    "raw_blocks_v2",
+    "rt_thing_to_mqtt_v1",
+    "rt_mqtt_to_thing_v1"
+  ],
+  "device": "Sequential GPU, same device/core/initial cache/seed and budget as matched main30 replay controls",
+  "budget": "Same update20epoch/6round cap256, memory128, batch12, lr1e-5, gradclip5, MSEAvg/shared model/original stops",
+  "controls": "Reuse matched main30 replay, safe_replay and new_only only after exact core/initial/input/participant proof; no extra favorable-seed selection",
+  "prior": "Coefficients came from earlier exploratory V3 separate PCA-split trials; no current final features used to choose them. Inspired by latent distillation, not a claim of exact LwF reproduction or a novel loss.",
+  "resource_change": "Heavy parallel CPU training was rejected by preflight: 31.14GiB total RAM, 2.71GiB available. No such CPU study was started."
+}

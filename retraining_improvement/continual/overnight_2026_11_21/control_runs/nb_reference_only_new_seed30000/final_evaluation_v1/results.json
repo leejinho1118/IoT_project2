@@ -1,0 +1,1106 @@
+[
+  {
+    "method": "reference_only_new",
+    "seed": 30000,
+    "stage": 1,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9959276386239364,
+        "mean_client_pr_auc": 0.9979536586202146,
+        "fpr": 0.049901077159815344,
+        "tpr": 0.9864962449451185,
+        "confusion_matrix": [
+          [
+            4322,
+            227
+          ],
+          [
+            187,
+            13661
+          ]
+        ],
+        "auc_clients": 9,
+        "normal_clients": 9,
+        "attack_clients": 9,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Danmini_Doorbell",
+            "auc": 0.9998351258116883,
+            "fpr": 0.0078125,
+            "tpr": 0.9987012987012988,
+            "normal": 512,
+            "attack": 1540
+          },
+          {
+            "client": 2,
+            "device": "Ecobee_Thermostat",
+            "auc": 0.9976750282563571,
+            "fpr": 0.22958057395143489,
+            "tpr": 1.0,
+            "normal": 453,
+            "attack": 1541
+          },
+          {
+            "client": 3,
+            "device": "Ennio_Doorbell",
+            "auc": 0.9885974581436932,
+            "fpr": 0.109375,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1538
+          },
+          {
+            "client": 4,
+            "device": "Philips_B120N10_Baby_Monitor",
+            "auc": 0.9999275679082629,
+            "fpr": 0.001953125,
+            "tpr": 0.9876382563435263,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 5,
+            "device": "Provision_PT_737E_Security_Camera",
+            "auc": 0.999846240647365,
+            "fpr": 0.0234375,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 6,
+            "device": "Provision_PT_838_Security_Camera",
+            "auc": 0.9863040280032468,
+            "fpr": 0.064453125,
+            "tpr": 0.8967532467532467,
+            "normal": 512,
+            "attack": 1540
+          },
+          {
+            "client": 7,
+            "device": "Samsung_SNH_1011_N_Webcam",
+            "auc": 0.9990164575211176,
+            "fpr": 0.009765625,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1539
+          },
+          {
+            "client": 8,
+            "device": "SimpleHome_XCS7_1002_WHT_Security_Camera",
+            "auc": 0.9921506485849056,
+            "fpr": 0.0234375,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 9,
+            "device": "SimpleHome_XCS7_1003_WHT_Security_Camera",
+            "auc": 0.9999961927387915,
+            "fpr": 0.0,
+            "tpr": 0.99545159194282,
+            "normal": 512,
+            "attack": 1539
+          }
+        ],
+        "attack_type_tpr": {
+          "gafgyt/combo": {
+            "detected": 4606,
+            "total": 4608,
+            "tpr": 0.9995659722222222
+          },
+          "gafgyt/junk": {
+            "detected": 4608,
+            "total": 4608,
+            "tpr": 1.0
+          },
+          "gafgyt/scan": {
+            "detected": 4426,
+            "total": 4608,
+            "tpr": 0.9605034722222222
+          },
+          "gafgyt/tcp": {
+            "detected": 10,
+            "total": 11,
+            "tpr": 0.9090909090909091
+          },
+          "gafgyt/udp": {
+            "detected": 11,
+            "total": 13,
+            "tpr": 0.8461538461538461
+          }
+        },
+        "normal_pattern_fpr": {
+          "Danmini_Doorbell": {
+            "false_positive": 4,
+            "total": 512,
+            "fpr": 0.0078125
+          },
+          "Ecobee_Thermostat": {
+            "false_positive": 104,
+            "total": 453,
+            "fpr": 0.22958057395143489
+          },
+          "Ennio_Doorbell": {
+            "false_positive": 56,
+            "total": 512,
+            "fpr": 0.109375
+          },
+          "Philips_B120N10_Baby_Monitor": {
+            "false_positive": 1,
+            "total": 512,
+            "fpr": 0.001953125
+          },
+          "Provision_PT_737E_Security_Camera": {
+            "false_positive": 12,
+            "total": 512,
+            "fpr": 0.0234375
+          },
+          "Provision_PT_838_Security_Camera": {
+            "false_positive": 33,
+            "total": 512,
+            "fpr": 0.064453125
+          },
+          "Samsung_SNH_1011_N_Webcam": {
+            "false_positive": 5,
+            "total": 512,
+            "fpr": 0.009765625
+          },
+          "SimpleHome_XCS7_1002_WHT_Security_Camera": {
+            "false_positive": 12,
+            "total": 512,
+            "fpr": 0.0234375
+          },
+          "SimpleHome_XCS7_1003_WHT_Security_Camera": {
+            "false_positive": 0,
+            "total": 512,
+            "fpr": 0.0
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.98946796169895,
+        "mean_client_pr_auc": 0.9905029518802431,
+        "fpr": 0.09337962408715432,
+        "tpr": 0.9889508928571429,
+        "confusion_matrix": [
+          [
+            7573,
+            780
+          ],
+          [
+            198,
+            17722
+          ]
+        ],
+        "auc_clients": 7,
+        "normal_clients": 9,
+        "attack_clients": 7,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Danmini_Doorbell",
+            "auc": 0.994070816040039,
+            "fpr": 0.021484375,
+            "tpr": 0.9578125,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 2,
+            "device": "Ecobee_Thermostat",
+            "auc": 0.9999709550455235,
+            "fpr": 0.08952959028831563,
+            "tpr": 1.0,
+            "normal": 659,
+            "attack": 2560
+          },
+          {
+            "client": 3,
+            "device": "Ennio_Doorbell",
+            "auc": null,
+            "fpr": 0.031685678073510776,
+            "tpr": null,
+            "normal": 789,
+            "attack": 0
+          },
+          {
+            "client": 4,
+            "device": "Philips_B120N10_Baby_Monitor",
+            "auc": 0.9619441986083985,
+            "fpr": 0.1015625,
+            "tpr": 0.990625,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 5,
+            "device": "Provision_PT_737E_Security_Camera",
+            "auc": 0.9995059967041016,
+            "fpr": 0.037109375,
+            "tpr": 1.0,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 6,
+            "device": "Provision_PT_838_Security_Camera",
+            "auc": 0.9897220611572266,
+            "fpr": 0.0380859375,
+            "tpr": 0.97421875,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 7,
+            "device": "Samsung_SNH_1011_N_Webcam",
+            "auc": null,
+            "fpr": 0.259765625,
+            "tpr": null,
+            "normal": 1024,
+            "attack": 0
+          },
+          {
+            "client": 8,
+            "device": "SimpleHome_XCS7_1002_WHT_Security_Camera",
+            "auc": 0.9823844909667969,
+            "fpr": 0.2119140625,
+            "tpr": 1.0,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 9,
+            "device": "SimpleHome_XCS7_1003_WHT_Security_Camera",
+            "auc": 0.998677213370565,
+            "fpr": 0.013140604467805518,
+            "tpr": 1.0,
+            "normal": 761,
+            "attack": 2560
+          }
+        ],
+        "attack_type_tpr": {
+          "mirai/ack": {
+            "detected": 3584,
+            "total": 3584,
+            "tpr": 1.0
+          },
+          "mirai/scan": {
+            "detected": 3561,
+            "total": 3584,
+            "tpr": 0.9935825892857143
+          },
+          "mirai/syn": {
+            "detected": 3541,
+            "total": 3584,
+            "tpr": 0.9880022321428571
+          },
+          "mirai/udp": {
+            "detected": 3584,
+            "total": 3584,
+            "tpr": 1.0
+          },
+          "mirai/udpplain": {
+            "detected": 3452,
+            "total": 3584,
+            "tpr": 0.9631696428571429
+          }
+        },
+        "normal_pattern_fpr": {
+          "Danmini_Doorbell": {
+            "false_positive": 22,
+            "total": 1024,
+            "fpr": 0.021484375
+          },
+          "Ecobee_Thermostat": {
+            "false_positive": 59,
+            "total": 659,
+            "fpr": 0.08952959028831563
+          },
+          "Ennio_Doorbell": {
+            "false_positive": 25,
+            "total": 789,
+            "fpr": 0.031685678073510776
+          },
+          "Philips_B120N10_Baby_Monitor": {
+            "false_positive": 104,
+            "total": 1024,
+            "fpr": 0.1015625
+          },
+          "Provision_PT_737E_Security_Camera": {
+            "false_positive": 38,
+            "total": 1024,
+            "fpr": 0.037109375
+          },
+          "Provision_PT_838_Security_Camera": {
+            "false_positive": 39,
+            "total": 1024,
+            "fpr": 0.0380859375
+          },
+          "Samsung_SNH_1011_N_Webcam": {
+            "false_positive": 266,
+            "total": 1024,
+            "fpr": 0.259765625
+          },
+          "SimpleHome_XCS7_1002_WHT_Security_Camera": {
+            "false_positive": 217,
+            "total": 1024,
+            "fpr": 0.2119140625
+          },
+          "SimpleHome_XCS7_1003_WHT_Security_Camera": {
+            "false_positive": 10,
+            "total": 761,
+            "fpr": 0.013140604467805518
+          }
+        }
+      }
+    },
+    "weights_sha256": "19c8e47fd92c7380660f20745f2452bba6ceeb4522ab54af52ed595b306d7478",
+    "bundle_sha256": "4daf2c4b37b2ee0b6129540810ddac3ee4b7caf8159f09e1367e437d98d0db06",
+    "cumulative_training_seconds": 0.0,
+    "cumulative_optimizer_steps": 0,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "reference_only_new_seed30000_stage1.csv.gz"
+  },
+  {
+    "method": "reference_only_new",
+    "seed": 30000,
+    "stage": 2,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9955935798319404,
+        "mean_client_pr_auc": 0.9974716287152506,
+        "fpr": 0.055616619037151024,
+        "tpr": 0.9598497978047371,
+        "confusion_matrix": [
+          [
+            4296,
+            253
+          ],
+          [
+            556,
+            13292
+          ]
+        ],
+        "auc_clients": 9,
+        "normal_clients": 9,
+        "attack_clients": 9,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Danmini_Doorbell",
+            "auc": 0.9998807832792208,
+            "fpr": 0.04296875,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1540
+          },
+          {
+            "client": 2,
+            "device": "Ecobee_Thermostat",
+            "auc": 0.9977036785551082,
+            "fpr": 0.19426048565121412,
+            "tpr": 1.0,
+            "normal": 453,
+            "attack": 1541
+          },
+          {
+            "client": 3,
+            "device": "Ennio_Doorbell",
+            "auc": 0.9884768164824447,
+            "fpr": 0.111328125,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1538
+          },
+          {
+            "client": 4,
+            "device": "Philips_B120N10_Baby_Monitor",
+            "auc": 0.9998220966167859,
+            "fpr": 0.0,
+            "tpr": 0.8087182823682498,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 5,
+            "device": "Provision_PT_737E_Security_Camera",
+            "auc": 0.9996848568640209,
+            "fpr": 0.0234375,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 6,
+            "device": "Provision_PT_838_Security_Camera",
+            "auc": 0.9858981838474026,
+            "fpr": 0.03515625,
+            "tpr": 0.8571428571428571,
+            "normal": 512,
+            "attack": 1540
+          },
+          {
+            "client": 7,
+            "device": "Samsung_SNH_1011_N_Webcam",
+            "auc": 0.9991433662280702,
+            "fpr": 0.009765625,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1539
+          },
+          {
+            "client": 8,
+            "device": "SimpleHome_XCS7_1002_WHT_Security_Camera",
+            "auc": 0.9897349747885492,
+            "fpr": 0.01953125,
+            "tpr": 0.9726740403383214,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 9,
+            "device": "SimpleHome_XCS7_1003_WHT_Security_Camera",
+            "auc": 0.9999974618258609,
+            "fpr": 0.080078125,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1539
+          }
+        ],
+        "attack_type_tpr": {
+          "gafgyt/combo": {
+            "detected": 4608,
+            "total": 4608,
+            "tpr": 1.0
+          },
+          "gafgyt/junk": {
+            "detected": 4607,
+            "total": 4608,
+            "tpr": 0.9997829861111112
+          },
+          "gafgyt/scan": {
+            "detected": 4057,
+            "total": 4608,
+            "tpr": 0.8804253472222222
+          },
+          "gafgyt/tcp": {
+            "detected": 10,
+            "total": 11,
+            "tpr": 0.9090909090909091
+          },
+          "gafgyt/udp": {
+            "detected": 10,
+            "total": 13,
+            "tpr": 0.7692307692307693
+          }
+        },
+        "normal_pattern_fpr": {
+          "Danmini_Doorbell": {
+            "false_positive": 22,
+            "total": 512,
+            "fpr": 0.04296875
+          },
+          "Ecobee_Thermostat": {
+            "false_positive": 88,
+            "total": 453,
+            "fpr": 0.19426048565121412
+          },
+          "Ennio_Doorbell": {
+            "false_positive": 57,
+            "total": 512,
+            "fpr": 0.111328125
+          },
+          "Philips_B120N10_Baby_Monitor": {
+            "false_positive": 0,
+            "total": 512,
+            "fpr": 0.0
+          },
+          "Provision_PT_737E_Security_Camera": {
+            "false_positive": 12,
+            "total": 512,
+            "fpr": 0.0234375
+          },
+          "Provision_PT_838_Security_Camera": {
+            "false_positive": 18,
+            "total": 512,
+            "fpr": 0.03515625
+          },
+          "Samsung_SNH_1011_N_Webcam": {
+            "false_positive": 5,
+            "total": 512,
+            "fpr": 0.009765625
+          },
+          "SimpleHome_XCS7_1002_WHT_Security_Camera": {
+            "false_positive": 10,
+            "total": 512,
+            "fpr": 0.01953125
+          },
+          "SimpleHome_XCS7_1003_WHT_Security_Camera": {
+            "false_positive": 41,
+            "total": 512,
+            "fpr": 0.080078125
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.9890200334036576,
+        "mean_client_pr_auc": 0.9897620102058763,
+        "fpr": 0.11205554890458518,
+        "tpr": 0.9702008928571428,
+        "confusion_matrix": [
+          [
+            7417,
+            936
+          ],
+          [
+            534,
+            17386
+          ]
+        ],
+        "auc_clients": 7,
+        "normal_clients": 9,
+        "attack_clients": 7,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Danmini_Doorbell",
+            "auc": 0.9945037841796874,
+            "fpr": 0.109375,
+            "tpr": 1.0,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 2,
+            "device": "Ecobee_Thermostat",
+            "auc": 1.0,
+            "fpr": 0.06525037936267071,
+            "tpr": 1.0,
+            "normal": 659,
+            "attack": 2560
+          },
+          {
+            "client": 3,
+            "device": "Ennio_Doorbell",
+            "auc": null,
+            "fpr": 0.032953105196451206,
+            "tpr": null,
+            "normal": 789,
+            "attack": 0
+          },
+          {
+            "client": 4,
+            "device": "Philips_B120N10_Baby_Monitor",
+            "auc": 0.9620258331298828,
+            "fpr": 0.0654296875,
+            "tpr": 0.9640625,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 5,
+            "device": "Provision_PT_737E_Security_Camera",
+            "auc": 0.99898681640625,
+            "fpr": 0.0380859375,
+            "tpr": 1.0,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 6,
+            "device": "Provision_PT_838_Security_Camera",
+            "auc": 0.988775634765625,
+            "fpr": 0.033203125,
+            "tpr": 0.8359375,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 7,
+            "device": "Samsung_SNH_1011_N_Webcam",
+            "auc": null,
+            "fpr": 0.2548828125,
+            "tpr": null,
+            "normal": 1024,
+            "attack": 0
+          },
+          {
+            "client": 8,
+            "device": "SimpleHome_XCS7_1002_WHT_Security_Camera",
+            "auc": 0.9800590515136719,
+            "fpr": 0.1708984375,
+            "tpr": 0.99140625,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 9,
+            "device": "SimpleHome_XCS7_1003_WHT_Security_Camera",
+            "auc": 0.9987891138304862,
+            "fpr": 0.2352168199737188,
+            "tpr": 1.0,
+            "normal": 761,
+            "attack": 2560
+          }
+        ],
+        "attack_type_tpr": {
+          "mirai/ack": {
+            "detected": 3584,
+            "total": 3584,
+            "tpr": 1.0
+          },
+          "mirai/scan": {
+            "detected": 3300,
+            "total": 3584,
+            "tpr": 0.9207589285714286
+          },
+          "mirai/syn": {
+            "detected": 3448,
+            "total": 3584,
+            "tpr": 0.9620535714285714
+          },
+          "mirai/udp": {
+            "detected": 3582,
+            "total": 3584,
+            "tpr": 0.9994419642857143
+          },
+          "mirai/udpplain": {
+            "detected": 3472,
+            "total": 3584,
+            "tpr": 0.96875
+          }
+        },
+        "normal_pattern_fpr": {
+          "Danmini_Doorbell": {
+            "false_positive": 112,
+            "total": 1024,
+            "fpr": 0.109375
+          },
+          "Ecobee_Thermostat": {
+            "false_positive": 43,
+            "total": 659,
+            "fpr": 0.06525037936267071
+          },
+          "Ennio_Doorbell": {
+            "false_positive": 26,
+            "total": 789,
+            "fpr": 0.032953105196451206
+          },
+          "Philips_B120N10_Baby_Monitor": {
+            "false_positive": 67,
+            "total": 1024,
+            "fpr": 0.0654296875
+          },
+          "Provision_PT_737E_Security_Camera": {
+            "false_positive": 39,
+            "total": 1024,
+            "fpr": 0.0380859375
+          },
+          "Provision_PT_838_Security_Camera": {
+            "false_positive": 34,
+            "total": 1024,
+            "fpr": 0.033203125
+          },
+          "Samsung_SNH_1011_N_Webcam": {
+            "false_positive": 261,
+            "total": 1024,
+            "fpr": 0.2548828125
+          },
+          "SimpleHome_XCS7_1002_WHT_Security_Camera": {
+            "false_positive": 175,
+            "total": 1024,
+            "fpr": 0.1708984375
+          },
+          "SimpleHome_XCS7_1003_WHT_Security_Camera": {
+            "false_positive": 179,
+            "total": 761,
+            "fpr": 0.2352168199737188
+          }
+        }
+      }
+    },
+    "weights_sha256": "19c8e47fd92c7380660f20745f2452bba6ceeb4522ab54af52ed595b306d7478",
+    "bundle_sha256": "2c189ca72d9836c6eba75f1226d78677a81aa6f0b83b5db368c8880f0e6883ec",
+    "cumulative_training_seconds": 0.0,
+    "cumulative_optimizer_steps": 0,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "reference_only_new_seed30000_stage2.csv.gz"
+  },
+  {
+    "method": "reference_only_new",
+    "seed": 30000,
+    "stage": 3,
+    "metrics": {
+      "old": {
+        "mean_client_auc": 0.9958669049018576,
+        "mean_client_pr_auc": 0.9979542836986638,
+        "fpr": 0.0635304462519235,
+        "tpr": 0.9924898902368573,
+        "confusion_matrix": [
+          [
+            4260,
+            289
+          ],
+          [
+            104,
+            13744
+          ]
+        ],
+        "auc_clients": 9,
+        "normal_clients": 9,
+        "attack_clients": 9,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Danmini_Doorbell",
+            "auc": 0.9997920048701299,
+            "fpr": 0.041015625,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1540
+          },
+          {
+            "client": 2,
+            "device": "Ecobee_Thermostat",
+            "auc": 0.9983053348288788,
+            "fpr": 0.16335540838852097,
+            "tpr": 0.9993510707332901,
+            "normal": 453,
+            "attack": 1541
+          },
+          {
+            "client": 3,
+            "device": "Ennio_Doorbell",
+            "auc": 0.9895664011703511,
+            "fpr": 0.125,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1538
+          },
+          {
+            "client": 4,
+            "device": "Philips_B120N10_Baby_Monitor",
+            "auc": 0.999911048308393,
+            "fpr": 0.001953125,
+            "tpr": 0.9954456733897202,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 5,
+            "device": "Provision_PT_737E_Security_Camera",
+            "auc": 0.9998348040013012,
+            "fpr": 0.0234375,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 6,
+            "device": "Provision_PT_838_Security_Camera",
+            "auc": 0.9835392146915585,
+            "fpr": 0.1015625,
+            "tpr": 0.938961038961039,
+            "normal": 512,
+            "attack": 1540
+          },
+          {
+            "client": 7,
+            "device": "Samsung_SNH_1011_N_Webcam",
+            "auc": 0.9989936139538661,
+            "fpr": 0.01171875,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1539
+          },
+          {
+            "client": 8,
+            "device": "SimpleHome_XCS7_1002_WHT_Security_Camera",
+            "auc": 0.9928609913793104,
+            "fpr": 0.021484375,
+            "tpr": 0.9986987638256344,
+            "normal": 512,
+            "attack": 1537
+          },
+          {
+            "client": 9,
+            "device": "SimpleHome_XCS7_1003_WHT_Security_Camera",
+            "auc": 0.9999987309129305,
+            "fpr": 0.09375,
+            "tpr": 1.0,
+            "normal": 512,
+            "attack": 1539
+          }
+        ],
+        "attack_type_tpr": {
+          "gafgyt/combo": {
+            "detected": 4608,
+            "total": 4608,
+            "tpr": 1.0
+          },
+          "gafgyt/junk": {
+            "detected": 4608,
+            "total": 4608,
+            "tpr": 1.0
+          },
+          "gafgyt/scan": {
+            "detected": 4506,
+            "total": 4608,
+            "tpr": 0.9778645833333334
+          },
+          "gafgyt/tcp": {
+            "detected": 11,
+            "total": 11,
+            "tpr": 1.0
+          },
+          "gafgyt/udp": {
+            "detected": 11,
+            "total": 13,
+            "tpr": 0.8461538461538461
+          }
+        },
+        "normal_pattern_fpr": {
+          "Danmini_Doorbell": {
+            "false_positive": 21,
+            "total": 512,
+            "fpr": 0.041015625
+          },
+          "Ecobee_Thermostat": {
+            "false_positive": 74,
+            "total": 453,
+            "fpr": 0.16335540838852097
+          },
+          "Ennio_Doorbell": {
+            "false_positive": 64,
+            "total": 512,
+            "fpr": 0.125
+          },
+          "Philips_B120N10_Baby_Monitor": {
+            "false_positive": 1,
+            "total": 512,
+            "fpr": 0.001953125
+          },
+          "Provision_PT_737E_Security_Camera": {
+            "false_positive": 12,
+            "total": 512,
+            "fpr": 0.0234375
+          },
+          "Provision_PT_838_Security_Camera": {
+            "false_positive": 52,
+            "total": 512,
+            "fpr": 0.1015625
+          },
+          "Samsung_SNH_1011_N_Webcam": {
+            "false_positive": 6,
+            "total": 512,
+            "fpr": 0.01171875
+          },
+          "SimpleHome_XCS7_1002_WHT_Security_Camera": {
+            "false_positive": 11,
+            "total": 512,
+            "fpr": 0.021484375
+          },
+          "SimpleHome_XCS7_1003_WHT_Security_Camera": {
+            "false_positive": 48,
+            "total": 512,
+            "fpr": 0.09375
+          }
+        }
+      },
+      "new": {
+        "mean_client_auc": 0.990476643404795,
+        "mean_client_pr_auc": 0.9917886288890086,
+        "fpr": 0.12713994971866396,
+        "tpr": 0.9979352678571428,
+        "confusion_matrix": [
+          [
+            7291,
+            1062
+          ],
+          [
+            37,
+            17883
+          ]
+        ],
+        "auc_clients": 7,
+        "normal_clients": 9,
+        "attack_clients": 7,
+        "clients": [
+          {
+            "client": 1,
+            "device": "Danmini_Doorbell",
+            "auc": 0.9933162689208984,
+            "fpr": 0.103515625,
+            "tpr": 1.0,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 2,
+            "device": "Ecobee_Thermostat",
+            "auc": 0.9999946652124431,
+            "fpr": 0.0409711684370258,
+            "tpr": 1.0,
+            "normal": 659,
+            "attack": 2560
+          },
+          {
+            "client": 3,
+            "device": "Ennio_Doorbell",
+            "auc": null,
+            "fpr": 0.048162230671736375,
+            "tpr": null,
+            "normal": 789,
+            "attack": 0
+          },
+          {
+            "client": 4,
+            "device": "Philips_B120N10_Baby_Monitor",
+            "auc": 0.9644393920898438,
+            "fpr": 0.099609375,
+            "tpr": 0.9921875,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 5,
+            "device": "Provision_PT_737E_Security_Camera",
+            "auc": 0.9992168426513672,
+            "fpr": 0.03515625,
+            "tpr": 1.0,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 6,
+            "device": "Provision_PT_838_Security_Camera",
+            "auc": 0.9930000305175781,
+            "fpr": 0.044921875,
+            "tpr": 0.993359375,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 7,
+            "device": "Samsung_SNH_1011_N_Webcam",
+            "auc": null,
+            "fpr": 0.283203125,
+            "tpr": null,
+            "normal": 1024,
+            "attack": 0
+          },
+          {
+            "client": 8,
+            "device": "SimpleHome_XCS7_1002_WHT_Security_Camera",
+            "auc": 0.9846961975097656,
+            "fpr": 0.2158203125,
+            "tpr": 1.0,
+            "normal": 1024,
+            "attack": 2560
+          },
+          {
+            "client": 9,
+            "device": "SimpleHome_XCS7_1003_WHT_Security_Camera",
+            "auc": 0.9986731069316689,
+            "fpr": 0.2575558475689882,
+            "tpr": 1.0,
+            "normal": 761,
+            "attack": 2560
+          }
+        ],
+        "attack_type_tpr": {
+          "mirai/ack": {
+            "detected": 3584,
+            "total": 3584,
+            "tpr": 1.0
+          },
+          "mirai/scan": {
+            "detected": 3582,
+            "total": 3584,
+            "tpr": 0.9994419642857143
+          },
+          "mirai/syn": {
+            "detected": 3569,
+            "total": 3584,
+            "tpr": 0.9958147321428571
+          },
+          "mirai/udp": {
+            "detected": 3584,
+            "total": 3584,
+            "tpr": 1.0
+          },
+          "mirai/udpplain": {
+            "detected": 3564,
+            "total": 3584,
+            "tpr": 0.9944196428571429
+          }
+        },
+        "normal_pattern_fpr": {
+          "Danmini_Doorbell": {
+            "false_positive": 106,
+            "total": 1024,
+            "fpr": 0.103515625
+          },
+          "Ecobee_Thermostat": {
+            "false_positive": 27,
+            "total": 659,
+            "fpr": 0.0409711684370258
+          },
+          "Ennio_Doorbell": {
+            "false_positive": 38,
+            "total": 789,
+            "fpr": 0.048162230671736375
+          },
+          "Philips_B120N10_Baby_Monitor": {
+            "false_positive": 102,
+            "total": 1024,
+            "fpr": 0.099609375
+          },
+          "Provision_PT_737E_Security_Camera": {
+            "false_positive": 36,
+            "total": 1024,
+            "fpr": 0.03515625
+          },
+          "Provision_PT_838_Security_Camera": {
+            "false_positive": 46,
+            "total": 1024,
+            "fpr": 0.044921875
+          },
+          "Samsung_SNH_1011_N_Webcam": {
+            "false_positive": 290,
+            "total": 1024,
+            "fpr": 0.283203125
+          },
+          "SimpleHome_XCS7_1002_WHT_Security_Camera": {
+            "false_positive": 221,
+            "total": 1024,
+            "fpr": 0.2158203125
+          },
+          "SimpleHome_XCS7_1003_WHT_Security_Camera": {
+            "false_positive": 196,
+            "total": 761,
+            "fpr": 0.2575558475689882
+          }
+        }
+      }
+    },
+    "weights_sha256": "19c8e47fd92c7380660f20745f2452bba6ceeb4522ab54af52ed595b306d7478",
+    "bundle_sha256": "4de3070d2e1cee288e8bf620298278fea47645833c55f6269a2654026435b613",
+    "cumulative_training_seconds": 0.0,
+    "cumulative_optimizer_steps": 0,
+    "checkpoint": {
+      "enabled": false,
+      "accepted": true
+    },
+    "prediction_file": "reference_only_new_seed30000_stage3.csv.gz"
+  }
+]

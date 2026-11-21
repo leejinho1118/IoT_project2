@@ -1,0 +1,170 @@
+{
+  "author": "20222038 이진호",
+  "created": "2026-11-21T02:53:30.815860+09:00",
+  "normal_blocks": [
+    [
+      "train",
+      0.0,
+      0.2,
+      1024
+    ],
+    [
+      "valid",
+      0.22,
+      0.26,
+      256
+    ],
+    [
+      "dev",
+      0.28,
+      0.32,
+      256
+    ],
+    [
+      "calib_old",
+      0.34,
+      0.38,
+      512
+    ],
+    [
+      "decision_old",
+      0.4,
+      0.44,
+      256
+    ],
+    [
+      "final_old_normal",
+      0.46,
+      0.5,
+      512
+    ],
+    [
+      "candidate_0",
+      0.52,
+      0.592,
+      512
+    ],
+    [
+      "new_valid_0",
+      0.5944,
+      0.6112,
+      128
+    ],
+    [
+      "calib_new_0",
+      0.6136,
+      0.6256,
+      128
+    ],
+    [
+      "decision_new_0",
+      0.628,
+      0.64,
+      128
+    ],
+    [
+      "candidate_1",
+      0.66,
+      0.732,
+      512
+    ],
+    [
+      "new_valid_1",
+      0.7344,
+      0.7512000000000001,
+      128
+    ],
+    [
+      "calib_new_1",
+      0.7536,
+      0.7656000000000001,
+      128
+    ],
+    [
+      "decision_new_1",
+      0.768,
+      0.78,
+      128
+    ],
+    [
+      "candidate_2",
+      0.8,
+      0.872,
+      512
+    ],
+    [
+      "new_valid_2",
+      0.8744000000000001,
+      0.8912,
+      128
+    ],
+    [
+      "calib_new_2",
+      0.8936000000000001,
+      0.9056000000000001,
+      128
+    ],
+    [
+      "decision_new_2",
+      0.908,
+      0.92,
+      128
+    ],
+    [
+      "final_new_normal",
+      0.94,
+      0.999,
+      1024
+    ]
+  ],
+  "gafgyt_blocks": [
+    [
+      "decision_attack",
+      0.02,
+      0.2,
+      256
+    ],
+    [
+      "candidate_0",
+      0.3,
+      0.42,
+      64
+    ],
+    [
+      "candidate_1",
+      0.44,
+      0.56,
+      64
+    ],
+    [
+      "candidate_2",
+      0.58,
+      0.7,
+      64
+    ],
+    [
+      "final_old_attack",
+      0.74,
+      0.98,
+      512
+    ]
+  ],
+  "mirai_blocks": [
+    [
+      "final_new_attack",
+      0.05,
+      0.95,
+      512
+    ]
+  ],
+  "sample_seed": 4422026,
+  "oversample_multiplier": 4,
+  "feature_count": 115,
+  "original_row_order": "File-row proxy; no timestamp column is asserted",
+  "attack_type_holdout": "Mirai features/labels are reserved for final evaluation; development selection uses Gafgyt only",
+  "prior_prepared_filter": "Exclude exact canonical float64 SHA-256 and six-decimal signed-log fingerprints matching earlier IID50 prepared data",
+  "cross_role_filter": "Training-first priority, then development/calibration/candidates; final last. Exact and coarse fingerprints must be disjoint.",
+  "coarse_filter_limits": "Conservative approximate duplicate exclusion, not proof all near duplicates or temporal dependence eliminated",
+  "source_license": "UCI CC BY 4.0; DOI 10.24432/C5RC8J",
+  "stage_availability": "New local validation, normal calibration and new development guards are stage-specific and never use a later stage. Mirai stays final-only."
+}
