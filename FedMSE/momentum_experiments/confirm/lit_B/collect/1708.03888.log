@@ -1,0 +1,29 @@
+OpenAI Codex v0.169.1
+--------
+workdir: /home/sdh2983/fedmse/agg_variants_2026-11-21/confirm/lit_B
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a2097f-5e64-7e92-a277-cf787cc1f619
+--------
+user
+Download and read the paper at https://arxiv.org/pdf/1708.03888 yourself (use your tools; do not answer from memory). Return ONLY one JSON object, no markdown fences, no commentary, with fields: arxiv_id (string), title (exact title as printed in the paper), quotes (list of objects {topic, text, location}). Include one or more quotes for each of these topics: update_rule_equation, constants_hyperparameters, signal_used, needs_labels_or_validation_data, heterogeneity_or_saturation_statement. 'text' must be VERBATIM from the paper text, at most 400 characters, a single contiguous span (no ellipses, no paraphrase, no merging of separate passages); for equations copy the surrounding sentence text as it appears in the PDF text. 'location' = section/page/equation number. If a topic is not in the paper, write {topic, text:\"not found in the paper text\", location:\"\"}. You are forbidden to evaluate, recommend, grade, or give any opinion on applicability or quality; only extract.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+hook: SessionStart
+hook: SessionStart Completed
+codex
+I’ll download the PDF and inspect its text directly, then extract short verbatim spans with locations.
+web search: 
+web search: https://arxiv.org/pdf/1708.03888
+web search: 
+web search: 
+codex
+{"arxiv_id":"1708.03888","title":"LARGE BATCH TRAINING OF CONVOLUTIONAL NETWORKS","quotes":[{"topic":"update_rule_equation","text":"We use local LR λᵢ for each layer l:","location":"Section 4, page 4, Equation (4)"},{"topic":"constants_hyperparameters","text":"Models have been trained for 100 epochs using SGD with momentum=0.9, weight decay=0.0005, polynomial (p=2) decay LR policy, and LARS coefficient η = 0.001.","location":"Section 5, page 5, footnote 6"},{"topic":"signal_used","text":"At each step t a mini-batch of B samples xi is selected from the training set. The gradients of loss function ∇L(xi, w) are computed for this subset","location":"Section 2, page 2"},{"topic":"needs_labels_or_validation_data","text":"The gradients of loss function ∇L(xi, w) are computed for this subset","location":"Section 2, page 2"},{"topic":"heterogeneity_or_saturation_statement","text":"We argue that when batch very large, the stochastic gradients become very close to true gradients, so increasing the batch does not give much additional gradient information comparing to smaller batches.","location":"Section 6, page 7"}]}
+hook: Stop
+hook: Stop Completed
+tokens used
+17,066
+{"arxiv_id":"1708.03888","title":"LARGE BATCH TRAINING OF CONVOLUTIONAL NETWORKS","quotes":[{"topic":"update_rule_equation","text":"We use local LR λᵢ for each layer l:","location":"Section 4, page 4, Equation (4)"},{"topic":"constants_hyperparameters","text":"Models have been trained for 100 epochs using SGD with momentum=0.9, weight decay=0.0005, polynomial (p=2) decay LR policy, and LARS coefficient η = 0.001.","location":"Section 5, page 5, footnote 6"},{"topic":"signal_used","text":"At each step t a mini-batch of B samples xi is selected from the training set. The gradients of loss function ∇L(xi, w) are computed for this subset","location":"Section 2, page 2"},{"topic":"needs_labels_or_validation_data","text":"The gradients of loss function ∇L(xi, w) are computed for this subset","location":"Section 2, page 2"},{"topic":"heterogeneity_or_saturation_statement","text":"We argue that when batch very large, the stochastic gradients become very close to true gradients, so increasing the batch does not give much additional gradient information comparing to smaller batches.","location":"Section 6, page 7"}]}

@@ -1,0 +1,31 @@
+{
+ "arxiv_id": "2409.03137",
+ "title": "THE ADEMAMIX OPTIMIZER: BETTER, FASTER, OLDER",
+ "quotes": [
+  {
+   "topic": "update_rule_equation",
+   "text": "AdEMAMix. To keep a high sensitivity to recent gradients, while also incorporating information from older gradients, we add a second EMA (changes compared to AdamW are in Blue):",
+   "location": "Section 3, page 5, Equation (AdEMAMix)"
+  },
+  {
+   "topic": "constants_hyperparameters",
+   "text": "In our experiments, while the values of β1, β2 remain similar to those of equation AdamW, we often use β3 = 0.9999. We find α ∈ [4, 10] to work well in practice.",
+   "location": "Section 3, page 5"
+  },
+  {
+   "topic": "signal_used",
+   "text": "Given a sampled batch x, let g = ∇θLθ(x) be a stochastic gradient of the loss w.r.t. θ.",
+   "location": "Section 3, page 4"
+  },
+  {
+   "topic": "needs_labels_or_validation_data",
+   "text": "For our experiments on ImageNet-1k, given that all models overfit the dataset, we select the best model according to the minimum validation loss, akin to using early stopping.",
+   "location": "Appendix B, page 24"
+  },
+  {
+   "topic": "heterogeneity_or_saturation_statement",
+   "text": "We observe how, after an initial phase in which the gap grows, this gap becomes seemingly constant after a sufficient number of iterations.",
+   "location": "Section 4.1, page 8"
+  }
+ ]
+}

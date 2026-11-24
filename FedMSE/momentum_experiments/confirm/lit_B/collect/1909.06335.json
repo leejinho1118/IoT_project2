@@ -1,0 +1,41 @@
+{
+ "arxiv_id": "1909.06335",
+ "title": "Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification",
+ "quotes": [
+  {
+   "topic": "update_rule_equation",
+   "text": "Vanilla FedAvg updates the weights via w ← w − ∆w, where ∆w =",
+   "location": "Section 4.2, page 3"
+  },
+  {
+   "topic": "update_rule_equation",
+   "text": "To add momentum at the server, we instead compute v ← βv+∆w, and update the model with w ← w−v.",
+   "location": "Section 4.2, page 3"
+  },
+  {
+   "topic": "constants_hyperparameters",
+   "text": "FedAvg is run under client batch size B = 64, local epoch counts E ∈ {1, 5}, and reporting fraction C ∈ {0.05, 0.1, 0.2, 0.4}",
+   "location": "Section 4, page 2"
+  },
+  {
+   "topic": "constants_hyperparameters",
+   "text": "In experiments, we use Nesterov accelerated gradient [Nesterov, 2007] with momentum β ∈ {0, 0.7, 0.9, 0.97, 0.99, 0.997}.",
+   "location": "Section 4.2, page 3"
+  },
+  {
+   "topic": "signal_used",
+   "text": "every participating device (also called client), receives an initial model from a central server, performs stochastic gradient descent (SGD) on its local dataset and sends back the gradients.",
+   "location": "Section 1, page 1"
+  },
+  {
+   "topic": "needs_labels_or_validation_data",
+   "text": "In our visual classification task, we assume on every client training examples are drawn independently with class labels following a categorical distribution over N classes parameterized by a vector q",
+   "location": "Section 3, page 2"
+  },
+  {
+   "topic": "heterogeneity_or_saturation_statement",
+   "text": "Increasing the reporting fraction C yields diminishing returns, and the gain in performance is especially marginal for identically distributed client datasets.",
+   "location": "Section 4.1, page 2"
+  }
+ ]
+}

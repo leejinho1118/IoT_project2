@@ -1,0 +1,29 @@
+OpenAI Codex v0.169.1
+--------
+workdir: /home/sdh2983/fedmse/agg_variants_2026-11-21/confirm/lit_B
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a2097f-c365-79a2-890c-ee0b0780a454
+--------
+user
+Download and read the paper at https://arxiv.org/pdf/1909.06335 yourself (use your tools; do not answer from memory). Return ONLY one JSON object, no markdown fences, no commentary, with fields: arxiv_id (string), title (exact title as printed in the paper), quotes (list of objects {topic, text, location}). Include one or more quotes for each of these topics: update_rule_equation, constants_hyperparameters, signal_used, needs_labels_or_validation_data, heterogeneity_or_saturation_statement. 'text' must be VERBATIM from the paper text, at most 400 characters, a single contiguous span (no ellipses, no paraphrase, no merging of separate passages); for equations copy the surrounding sentence text as it appears in the PDF text. 'location' = section/page/equation number. If a topic is not in the paper, write {topic, text:\"not found in the paper text\", location:\"\"}. You are forbidden to evaluate, recommend, grade, or give any opinion on applicability or quality; only extract.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+hook: SessionStart
+hook: SessionStart Completed
+codex
+I’ll fetch the PDF and inspect its text directly, then return only the requested JSON with verbatim spans and locations.
+web search: 
+web search: https://arxiv.org/pdf/1909.06335
+web search: 
+web search: 
+codex
+{"arxiv_id":"1909.06335","title":"Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification","quotes":[{"topic":"update_rule_equation","text":"Vanilla FedAvg updates the weights via w ← w − ∆w, where ∆w =","location":"Section 4.2, page 3"},{"topic":"update_rule_equation","text":"To add momentum at the server, we instead compute v ← βv+∆w, and update the model with w ← w−v.","location":"Section 4.2, page 3"},{"topic":"constants_hyperparameters","text":"FedAvg is run under client batch size B = 64, local epoch counts E ∈ {1, 5}, and reporting fraction C ∈ {0.05, 0.1, 0.2, 0.4}","location":"Section 4, page 2"},{"topic":"constants_hyperparameters","text":"In experiments, we use Nesterov accelerated gradient [Nesterov, 2007] with momentum β ∈ {0, 0.7, 0.9, 0.97, 0.99, 0.997}.","location":"Section 4.2, page 3"},{"topic":"signal_used","text":"every participating device (also called client), receives an initial model from a central server, performs stochastic gradient descent (SGD) on its local dataset and sends back the gradients.","location":"Section 1, page 1"},{"topic":"needs_labels_or_validation_data","text":"In our visual classification task, we assume on every client training examples are drawn independently with class labels following a categorical distribution over N classes parameterized by a vector q","location":"Section 3, page 2"},{"topic":"heterogeneity_or_saturation_statement","text":"Increasing the reporting fraction C yields diminishing returns, and the gain in performance is especially marginal for identically distributed client datasets.","location":"Section 4.1, page 2"}]}
+hook: Stop
+hook: Stop Completed
+tokens used
+15,479
+{"arxiv_id":"1909.06335","title":"Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification","quotes":[{"topic":"update_rule_equation","text":"Vanilla FedAvg updates the weights via w ← w − ∆w, where ∆w =","location":"Section 4.2, page 3"},{"topic":"update_rule_equation","text":"To add momentum at the server, we instead compute v ← βv+∆w, and update the model with w ← w−v.","location":"Section 4.2, page 3"},{"topic":"constants_hyperparameters","text":"FedAvg is run under client batch size B = 64, local epoch counts E ∈ {1, 5}, and reporting fraction C ∈ {0.05, 0.1, 0.2, 0.4}","location":"Section 4, page 2"},{"topic":"constants_hyperparameters","text":"In experiments, we use Nesterov accelerated gradient [Nesterov, 2007] with momentum β ∈ {0, 0.7, 0.9, 0.97, 0.99, 0.997}.","location":"Section 4.2, page 3"},{"topic":"signal_used","text":"every participating device (also called client), receives an initial model from a central server, performs stochastic gradient descent (SGD) on its local dataset and sends back the gradients.","location":"Section 1, page 1"},{"topic":"needs_labels_or_validation_data","text":"In our visual classification task, we assume on every client training examples are drawn independently with class labels following a categorical distribution over N classes parameterized by a vector q","location":"Section 3, page 2"},{"topic":"heterogeneity_or_saturation_statement","text":"Increasing the reporting fraction C yields diminishing returns, and the gain in performance is especially marginal for identically distributed client datasets.","location":"Section 4.1, page 2"}]}

@@ -1,0 +1,29 @@
+OpenAI Codex v0.169.1
+--------
+workdir: /home/sdh2983/fedmse/agg_variants_2026-11-21/confirm/lit_B
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a2097f-c366-7b62-88fa-3bdae38e929d
+--------
+user
+Download and read the paper at https://arxiv.org/pdf/2409.03137 yourself (use your tools; do not answer from memory). Return ONLY one JSON object, no markdown fences, no commentary, with fields: arxiv_id (string), title (exact title as printed in the paper), quotes (list of objects {topic, text, location}). Include one or more quotes for each of these topics: update_rule_equation, constants_hyperparameters, signal_used, needs_labels_or_validation_data, heterogeneity_or_saturation_statement. 'text' must be VERBATIM from the paper text, at most 400 characters, a single contiguous span (no ellipses, no paraphrase, no merging of separate passages); for equations copy the surrounding sentence text as it appears in the PDF text. 'location' = section/page/equation number. If a topic is not in the paper, write {topic, text:\"not found in the paper text\", location:\"\"}. You are forbidden to evaluate, recommend, grade, or give any opinion on applicability or quality; only extract.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+hook: SessionStart
+hook: SessionStart Completed
+web search: 
+web search: https://arxiv.org/pdf/2409.03137
+web search: 
+web search: 
+web search: 
+web search: 'saturat'
+codex
+{"arxiv_id":"2409.03137","title":"THE ADEMAMIX OPTIMIZER: BETTER, FASTER, OLDER","quotes":[{"topic":"update_rule_equation","text":"AdEMAMix. To keep a high sensitivity to recent gradients, while also incorporating information from older gradients, we add a second EMA (changes compared to AdamW are in Blue):","location":"Section 3, page 5, Equation (AdEMAMix)"},{"topic":"constants_hyperparameters","text":"In our experiments, while the values of β1, β2 remain similar to those of equation AdamW, we often use β3 = 0.9999. We find α ∈ [4, 10] to work well in practice.","location":"Section 3, page 5"},{"topic":"signal_used","text":"Given a sampled batch x, let g = ∇θLθ(x) be a stochastic gradient of the loss w.r.t. θ.","location":"Section 3, page 4"},{"topic":"needs_labels_or_validation_data","text":"For our experiments on ImageNet-1k, given that all models overfit the dataset, we select the best model according to the minimum validation loss, akin to using early stopping.","location":"Appendix B, page 24"},{"topic":"heterogeneity_or_saturation_statement","text":"We observe how, after an initial phase in which the gap grows, this gap becomes seemingly constant after a sufficient number of iterations.","location":"Section 4.1, page 8"}]}
+hook: Stop
+hook: Stop Completed
+tokens used
+28,237
+{"arxiv_id":"2409.03137","title":"THE ADEMAMIX OPTIMIZER: BETTER, FASTER, OLDER","quotes":[{"topic":"update_rule_equation","text":"AdEMAMix. To keep a high sensitivity to recent gradients, while also incorporating information from older gradients, we add a second EMA (changes compared to AdamW are in Blue):","location":"Section 3, page 5, Equation (AdEMAMix)"},{"topic":"constants_hyperparameters","text":"In our experiments, while the values of β1, β2 remain similar to those of equation AdamW, we often use β3 = 0.9999. We find α ∈ [4, 10] to work well in practice.","location":"Section 3, page 5"},{"topic":"signal_used","text":"Given a sampled batch x, let g = ∇θLθ(x) be a stochastic gradient of the loss w.r.t. θ.","location":"Section 3, page 4"},{"topic":"needs_labels_or_validation_data","text":"For our experiments on ImageNet-1k, given that all models overfit the dataset, we select the best model according to the minimum validation loss, akin to using early stopping.","location":"Appendix B, page 24"},{"topic":"heterogeneity_or_saturation_statement","text":"We observe how, after an initial phase in which the gap grows, this gap becomes seemingly constant after a sufficient number of iterations.","location":"Section 4.1, page 8"}]}

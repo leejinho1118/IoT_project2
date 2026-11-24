@@ -1,0 +1,35 @@
+OpenAI Codex v0.169.1
+--------
+workdir: /home/sdh2983/fedmse/agg_variants_2026-11-21/confirm/lit_B
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a2097f-c368-7d30-b943-9e8d77a3a776
+--------
+user
+Download and read the paper at https://arxiv.org/pdf/2511.22080 yourself (use your tools; do not answer from memory). Return ONLY one JSON object, no markdown fences, no commentary, with fields: arxiv_id (string), title (exact title as printed in the paper), quotes (list of objects {topic, text, location}). Include one or more quotes for each of these topics: update_rule_equation, constants_hyperparameters, signal_used, needs_labels_or_validation_data, heterogeneity_or_saturation_statement. 'text' must be VERBATIM from the paper text, at most 400 characters, a single contiguous span (no ellipses, no paraphrase, no merging of separate passages); for equations copy the surrounding sentence text as it appears in the PDF text. 'location' = section/page/equation number. If a topic is not in the paper, write {topic, text:\"not found in the paper text\", location:\"\"}. You are forbidden to evaluate, recommend, grade, or give any opinion on applicability or quality; only extract.
+warning: Codex could not find bubblewrap on PATH. Install bubblewrap with your OS package manager. See the sandbox prerequisites: https://developers.openai.com/codex/concepts/sandboxing#prerequisites. Codex will use the bundled bubblewrap in the meantime.
+hook: SessionStart
+hook: SessionStart Completed
+web search: 
+web search: https://arxiv.org/pdf/2511.22080
+web search: 
+web search: arxiv 2511.22080
+web search: 
+web search: https://ar5iv.labs.arxiv.org/html/2511.22080
+web search: 
+web search: https://arxiv.org/html/2511.22080
+web search: 
+web search: 
+web search: 
+web search: 
+codex
+{"arxiv_id":"2511.22080","title":"A Fast and Flat Federated Learning Method via Weighted Momentum and Sharpness-Aware Minimization","quotes":[{"topic":"update_rule_equation","text":"$v_{b+1,k}^{r}=\\alpha_{r}\\,g_{b,k}^{r}+(1-\\alpha_{r})\\,\\Delta_{r}^{k}$","location":"Section 4.2, Algorithm 1, line 17"},{"topic":"constants_hyperparameters","text":"The main experiments are conducted with 100 clients, 10% participation per round, a batch size of 50, a local learning rate $\\eta_{l}=0.1$, a global learning rate $\\eta_{g}=1$, and five local epochs, running for 500 communication rounds.","location":"Section 5.1"},{"topic":"signal_used","text":"For efficiency, we compute the similarity using $\\operatorname{sim}(\\Delta_{r},\\Delta_{r}^{k})$, which we empirically find to be a good proxy for the gradient–momentum similarity without incurring extra backpropagation (see Appendix B).","location":"Section 4.2.3"},{"topic":"needs_labels_or_validation_data","text":"not found in the paper text","location":""},{"topic":"heterogeneity_or_saturation_statement","text":"Accuracy saturates beyond 20%. Gains are most pronounced when participation is sparse or heterogeneity is stronger (few clients / low sampling), consistent with our momentum-guided global perturbation and cosine-based adaptive coupling.","location":"Section 5.3, Client sampling rate"}]}
+hook: Stop
+hook: Stop Completed
+tokens used
+40,521
+{"arxiv_id":"2511.22080","title":"A Fast and Flat Federated Learning Method via Weighted Momentum and Sharpness-Aware Minimization","quotes":[{"topic":"update_rule_equation","text":"$v_{b+1,k}^{r}=\\alpha_{r}\\,g_{b,k}^{r}+(1-\\alpha_{r})\\,\\Delta_{r}^{k}$","location":"Section 4.2, Algorithm 1, line 17"},{"topic":"constants_hyperparameters","text":"The main experiments are conducted with 100 clients, 10% participation per round, a batch size of 50, a local learning rate $\\eta_{l}=0.1$, a global learning rate $\\eta_{g}=1$, and five local epochs, running for 500 communication rounds.","location":"Section 5.1"},{"topic":"signal_used","text":"For efficiency, we compute the similarity using $\\operatorname{sim}(\\Delta_{r},\\Delta_{r}^{k})$, which we empirically find to be a good proxy for the gradient–momentum similarity without incurring extra backpropagation (see Appendix B).","location":"Section 4.2.3"},{"topic":"needs_labels_or_validation_data","text":"not found in the paper text","location":""},{"topic":"heterogeneity_or_saturation_statement","text":"Accuracy saturates beyond 20%. Gains are most pronounced when participation is sparse or heterogeneity is stronger (few clients / low sampling), consistent with our momentum-guided global perturbation and cosine-based adaptive coupling.","location":"Section 5.3, Client sampling rate"}]}
